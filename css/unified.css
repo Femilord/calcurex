@@ -105,6 +105,7 @@ body {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+
 }
 
 .logo i {
@@ -112,6 +113,7 @@ body {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
 }
 
 .logo h1 {
@@ -120,6 +122,10 @@ body {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.container a {
+    text-decoration: none;
 }
 
 .theme-toggle {
@@ -1767,4 +1773,622 @@ option {
 /* Section Title Icon Size */
 .section-title i {
     font-size: 1.25rem;
+}
+
+
+/* ========================================
+   ADDITIONAL STYLES FOR STATIC PAGES
+======================================== */
+
+/* Page Content */
+.page-content {
+    padding: 3rem 0 4rem;
+    min-height: calc(100vh - 400px);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.page-header h1 i {
+    font-size: 2rem;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.content-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.content-card h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.content-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 1.5rem 0 0.75rem;
+}
+
+.content-card p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.content-card ul {
+    margin: 1rem 0 1rem 1.5rem;
+    color: var(--text-secondary);
+}
+
+.content-card ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.content-card a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.content-card a:hover {
+    text-decoration: underline;
+}
+
+/* Feature Grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--surface-elevated);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
+}
+
+.feature-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 0.5rem;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Benefits List */
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    background: var(--surface-elevated);
+    border-left: 3px solid var(--primary-color);
+    border-radius: var(--radius);
+}
+
+.benefits-list li i {
+    color: var(--success-color);
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.benefits-list li strong {
+    color: var(--text-primary);
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+    border: 2px solid var(--primary-color);
+    border-radius: var(--radius-lg);
+    margin-top: 3rem;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.btn-large {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.contact-form-section,
+.contact-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Contact Form Specific Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.contact-form .form-group {
+    margin-bottom: 0;
+}
+
+.contact-form .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.contact-form .form-group label i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.875rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    background: var(--surface-elevated);
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    transition: var(--transition);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+    line-height: 1.6;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    background: var(--surface-color);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-method {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    background: var(--surface-elevated);
+    border-radius: var(--radius);
+    border-left: 3px solid var(--primary-color);
+}
+
+.contact-method i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.contact-method h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 0.25rem;
+}
+
+.contact-method p {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin: 0.25rem 0;
+}
+
+.contact-method small {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.contact-social {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.contact-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.contact-social a:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.faq-item {
+    padding: 1.25rem;
+    background: var(--surface-elevated);
+    border-radius: var(--radius);
+    border-left: 3px solid var(--secondary-color);
+}
+
+.faq-item strong {
+    display: block;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+.faq-item p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+/* Agreement Note */
+.agreement-note {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+    border: 2px solid var(--primary-color);
+    text-align: center;
+    padding: 2rem;
+}
+
+.agreement-note p {
+    color: var(--text-primary);
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+        flex-direction: column;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-card {
+        padding: 1.5rem;
+    }
+
+    .cta-section {
+        padding: 2rem 1rem;
+    }
+}
+
+
+
+/* ========================================
+   DONATION BUTTON STYLES
+======================================== */
+
+/* Header Actions Container */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Donation Button */
+.donate-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.donate-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.donate-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.donate-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+}
+
+.donate-btn i {
+    font-size: 1.25rem;
+    animation: heartbeat 1.5s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    10%,
+    30% {
+        transform: scale(1.1);
+    }
+
+    20%,
+    40% {
+        transform: scale(1);
+    }
+}
+
+.donate-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.125rem;
+    z-index: 1;
+}
+
+.donate-main {
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.donate-sub {
+    font-size: 0.75rem;
+    font-weight: 500;
+    opacity: 0.9;
+    line-height: 1;
+}
+
+/* Alternative Compact Version (for mobile) */
+@media (max-width: 768px) {
+    .donate-btn {
+        padding: 0.625rem 1rem;
+        gap: 0.5rem;
+    }
+
+    .donate-btn i {
+        font-size: 1.1rem;
+    }
+
+    .donate-main {
+        font-size: 0.85rem;
+    }
+
+    .donate-sub {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Ultra compact for small screens */
+    .donate-text {
+        display: none;
+    }
+
+    .donate-btn {
+        padding: 0.75rem;
+        width: 44px;
+        height: 44px;
+        justify-content: center;
+    }
+
+    .donate-btn i {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+}
+
+/* ========================================
+   ALTERNATIVE DONATION BUTTON STYLES
+   (Choose your favorite!)
+======================================== */
+
+/* Style Option 1: Gradient with Pulse */
+.donate-btn.style-1 {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 4px 12px rgba(245, 87, 108, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 4px 20px rgba(245, 87, 108, 0.6);
+    }
+}
+
+/* Style Option 2: PayPal Blue */
+.donate-btn.style-2 {
+    background: linear-gradient(135deg, #0070ba, #003087);
+    box-shadow: 0 4px 12px rgba(0, 112, 186, 0.3);
+}
+
+.donate-btn.style-2:hover {
+    box-shadow: 0 6px 20px rgba(0, 112, 186, 0.5);
+}
+
+/* Style Option 3: Coffee Theme */
+.donate-btn.style-3 {
+    background: linear-gradient(135deg, #d4a574, #a67c52);
+    box-shadow: 0 4px 12px rgba(166, 124, 82, 0.3);
+}
+
+.donate-btn.style-3:hover {
+    box-shadow: 0 6px 20px rgba(166, 124, 82, 0.5);
+}
+
+.donate-btn.style-3 i {
+    animation: coffee-steam 2s ease-in-out infinite;
+}
+
+@keyframes coffee-steam {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Style Option 4: Gold/Premium */
+.donate-btn.style-4 {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+    color: #333;
+    box-shadow: 0 4px 12px rgba(247, 151, 30, 0.4);
+}
+
+.donate-btn.style-4:hover {
+    box-shadow: 0 6px 20px rgba(247, 151, 30, 0.6);
+}
+
+/* Style Option 5: Simple Outlined */
+.donate-btn.style-5 {
+    background: transparent;
+    border: 2px solid #ff6b6b;
+    color: var(--text-primary);
+    box-shadow: none;
+}
+
+.donate-btn.style-5:hover {
+    background: #ff6b6b;
+    color: white;
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
 }
