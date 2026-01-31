@@ -1,34 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
-  <!-- Homepage -->
-  <url>
-    <loc>https://calcrex.com/</loc>
-    <lastmod>2025-01-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Main Pages -->
-  <url>
-    <loc>https://calcrex.com/about</loc>
-    <lastmod>2025-01-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://calcrex.com/contact</loc>
-    <lastmod>2025-01-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://calcrex.com/policy-document</loc>
-    <lastmod>2025-01-29</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
+ <url>
+  <loc>https://calcrex.com/</loc>
+  <lastmod>2026-01-31T10:00:19+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://calcrex.com/converters/</loc>
+  <lastmod>2026-01-31T10:00:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://calcrex.com/physics/</loc>
+  <lastmod>2026-01-31T10:00:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://calcrex.com/chemistry/</loc>
+  <lastmod>2026-01-31T10:00:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://calcrex.com/electricity/</loc>
+  <lastmod>2026-01-31T10:00:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://calcrex.com/computer-science/</loc>
+  <lastmod>2026-01-31T10:00:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://calcrex.com/finance/</loc>
+  <lastmod>2026-01-31T10:00:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://calcrex.com/date-time/</loc>
+  <lastmod>2026-01-31T10:00:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://calcrex.com/about/</loc>
+  <lastmod>2026-01-31T10:00:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://calcrex.com/contact/</loc>
+  <lastmod>2026-01-31T10:00:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://calcrex.com/policy-document/</loc>
+  <lastmod>2026-01-31T10:00:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://calcrex.com/about/index.html</loc>
+  <lastmod>2026-01-31T10:00:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
 
 </urlset>
