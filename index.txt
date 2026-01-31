@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date & Time Calculators - CalcRex | 8+ Date Tools</title>
+    <meta name="description" content="Calculate date differences, age, business days, and time zones with 8+ free date and time calculators.">
+    <link rel="canonical" href="https://calcrex.com/date-time/">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/unified.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="logo">CalcRex</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-clock"></i> Date & Time Calculators</h1>
+                <p class="page-subtitle">Comprehensive date and time calculation tools</p>
+            </div>
+
+            <section class="description-section">
+                <h2>About Date & Time Calculators</h2>
+                <p>
+                    Calculate <strong>date differences</strong>, <strong>age</strong>, <strong>business
+                    days</strong>, and <strong>time zones</strong> with our comprehensive <strong>date and time
+                    calculators</strong>. Perfect for project planning, age calculations, scheduling across time
+                    zones, and calendar calculations.
+                </p>
+            </section>
+
+            <section class="calculator-list-section">
+                <h2>Available Date & Time Calculators</h2>
+                <ul class="calculator-feature-list">
+                    <li><strong>Age Calculator</strong> - Calculate exact age in years, months, and days</li>
+                    <li><strong>Date Difference Calculator</strong> - Find days, weeks, months between dates</li>
+                    <li><strong>Add/Subtract Days Calculator</strong> - Calculate future or past dates</li>
+                    <li><strong>Business Days Calculator</strong> - Calculate working days excluding weekends</li>
+                    <li><strong>Time Difference Calculator</strong> - Find duration between times</li>
+                    <li><strong>Time Zone Converter</strong> - Convert times across different time zones</li>
+                    <li><strong>Unix Timestamp Converter</strong> - Convert Unix time to readable dates</li>
+                    <li><strong>Week Number Calculator</strong> - Find ISO week number for any date</li>
+                </ul>
+            </section>
+
+            <section id="date-time" class="calculator-section">
+                <h2 class="section-title">Use the Date & Time Calculator</h2>
+                <div class="datetime-container">
+                    <div class="datetime-type-select">
+                        <label for="datetime-type">Date & Time Calculator:</label>
+                        <select id="datetime-type" onchange="DateTimeApp.changeType()">
+                            <option value="age">Age Calculator</option>
+                            <option value="date-diff">Date Difference</option>
+                            <option value="date-add">Add/Subtract Days</option>
+                            <option value="business-days">Business Days Calculator</option>
+                            <option value="time-diff">Time Difference</option>
+                            <option value="timezone">Time Zone Converter</option>
+                            <option value="unix">Unix Timestamp</option>
+                            <option value="week-number">Week Number</option>
+                        </select>
+                    </div>
+                    <div id="datetime-inputs" class="datetime-inputs"></div>
+                    <button class="calc-button" onclick="DateTimeApp.calculate()">Calculate</button>
+                    <div id="datetime-result" class="datetime-result"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="/"><h3>CalcRex</h3></a>
+                    <p>Complete Calculator Suite - Free Forever</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/"><i class="fas fa-calculator"></i> All Calculators</a></li>
+                        <li><a href="/converters"><i class="fas fa-exchange-alt"></i> Converters</a></li>
+                        <li><a href="/physics"><i class="fas fa-atom"></i> Physics</a></li>
+                        <li><a href="/chemistry"><i class="fas fa-vial"></i> Chemistry</a></li>
+                        <li><a href="/electricity"><i class="fas fa-bolt"></i> Electricity</a></li>
+                        <li><a href="/finance"><i class="fas fa-dollar-sign"></i> Finance</a></li>
+                        <li><a href="/date-time"><i class="fas fa-clock"></i> Date & Time</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Information</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="/contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="/policy-document"><i class="fas fa-shield-alt"></i> Policy Document</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CalcRex. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/datetime.js"></script>
+</body>
+</html>

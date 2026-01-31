@@ -1,4 +1,4 @@
-cd /home/claude/calcrex_footer_update && cat>footer-styles.css << 'EOF'
+
 /* ========================================
    ENHANCED FOOTER STYLES
 ======================================== */
@@ -135,4 +135,3 @@ cd /home/claude/calcrex_footer_update && cat>footer-styles.css << 'EOF'
     }
 }
 
-EOF cat footer-styles.css

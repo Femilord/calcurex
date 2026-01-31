@@ -5,42 +5,58 @@
 const ChemistryApp = {
     types: {
         molarity: {
-            inputs: ['Moles of Solute (mol)', 'Volume of Solution (L)'],
+            inputs: ['Moles of Solute (n)', 'Volume of Solution (V)'],
+            units: ['mol', 'L'],
+            formula: 'M = n/V',
             calc: (v) => v[0] / v[1],
             label: 'Molarity (M)'
         },
         dilution: {
-            inputs: ['Initial Molarity M₁ (M)', 'Initial Volume V₁ (L)', 'Final Volume V₂ (L)'],
+            inputs: ['Initial Molarity (M₁)', 'Initial Volume (V₁)', 'Final Volume (V₂)'],
+            units: ['M', 'L', 'L'],
+            formula: 'M₁V₁ = M₂V₂',
             calc: (v) => (v[0] * v[1]) / v[2],
             label: 'Final Molarity M₂ (M)'
         },
         'molecular-weight': {
-            inputs: ['Total Mass (g)', 'Number of Moles (mol)'],
+            inputs: ['Total Mass (m)', 'Number of Moles (n)'],
+            units: ['g', 'mol'],
+            formula: 'MW = m/n',
             calc: (v) => v[0] / v[1],
             label: 'Molecular Weight (g/mol)'
         },
         'percent-composition': {
-            inputs: ['Mass of Element (g)', 'Total Mass (g)'],
+            inputs: ['Mass of Element (m_element)', 'Total Mass (m_total)'],
+            units: ['g', 'g'],
+            formula: '% = (m_element/m_total) × 100',
             calc: (v) => (v[0] / v[1]) * 100,
             label: 'Percent Composition (%)'
         },
         'ideal-gas': {
-            inputs: ['Pressure P (atm)', 'Volume V (L)', 'Temperature T (K)'],
+            inputs: ['Pressure (P)', 'Volume (V)', 'Temperature (T)'],
+            units: ['atm', 'L', 'K'],
+            formula: 'PV = nRT (where R = 0.0821 L⋅atm/mol⋅K)',
             calc: (v) => (v[0] * v[1]) / (0.0821 * v[2]),
             label: 'Moles n (mol)'
         },
         ph: {
-            inputs: ['H⁺ Concentration (mol/L)'],
+            inputs: ['H⁺ Concentration ([H⁺])'],
+            units: ['mol/L'],
+            formula: 'pH = -log₁₀[H⁺]',
             calc: (v) => -Math.log10(v[0]),
             label: 'pH'
         },
         density: {
-            inputs: ['Mass (g)', 'Volume (mL)'],
+            inputs: ['Mass (m)', 'Volume (V)'],
+            units: ['g', 'mL'],
+            formula: 'ρ = m/V',
             calc: (v) => v[0] / v[1],
             label: 'Density (g/mL)'
         },
         'percent-yield': {
-            inputs: ['Actual Yield (g)', 'Theoretical Yield (g)'],
+            inputs: ['Actual Yield (Y_actual)', 'Theoretical Yield (Y_theoretical)'],
+            units: ['g', 'g'],
+            formula: '% Yield = (Y_actual/Y_theoretical) × 100',
             calc: (v) => (v[0] / v[1]) * 100,
             label: 'Percent Yield (%)'
         }
@@ -62,7 +78,7 @@ const ChemistryApp = {
             const div = document.createElement('div');
             div.className = 'input-row';
             div.innerHTML = `
-                <label for="chem-input-${i}">${input}:</label>
+                <label for="chem-input-${i}">${input} [${data.units[i]}]:</label>
                 <input type="text" id="chem-input-${i}" class="number-input" placeholder="Enter number">
             `;
             inputsContainer.appendChild(div);
@@ -94,14 +110,15 @@ const ChemistryApp = {
         if (!resultContainer) return;
 
         if (values.some(isNaN)) {
-            resultContainer.textContent = 'Please fill all fields with valid numbers';
-            resultContainer.style.color = '#ef4444';
+            resultContainer.innerHTML = '<p style="color: #ef4444;">Please fill all fields with valid numbers</p>';
             return;
         }
 
         const result = data.calc(values);
-        resultContainer.textContent = `${data.label}: ${result.toFixed(4)}`;
-        resultContainer.style.color = '#3b82f6';
+        resultContainer.innerHTML = `
+            <p style="color: #3b82f6; font-size: 1.2em; font-weight: bold;">${data.label}: ${result.toFixed(4)}</p>
+            <p style="color: #6b7280; margin-top: 10px; font-style: italic;">Formula used: ${data.formula}</p>
+        `;
     }
 };
 

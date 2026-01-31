@@ -31,21 +31,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Smooth Scroll Navigation with Active State
+    // FIXED: Smooth Scroll Navigation - ONLY for same-page anchors
     document.querySelectorAll('.nav-menu a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+            const href = this.getAttribute('href');
 
-            // Remove active class from all
-            document.querySelectorAll('.nav-menu a').forEach(a => a.classList.remove('active'));
+            // ONLY prevent default for same-page anchor links (starting with # or /#)
+            if (href.startsWith('#') || (href.startsWith('/') && href.includes('#'))) {
+                e.preventDefault();
 
-            // Add active class to clicked
-            this.classList.add('active');
+                // Remove active class from all
+                document.querySelectorAll('.nav-menu a').forEach(a => a.classList.remove('active'));
 
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // Add active class to clicked
+                this.classList.add('active');
+
+                // Extract the anchor part
+                const anchorPart = href.includes('#') ? href.split('#')[1] : '';
+                const target = document.getElementById(anchorPart) || document.querySelector(`[id="${anchorPart}"]`);
+
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             }
+            // For all other links (/converter, /physics, etc.), let them navigate normally
+            // DO NOT call e.preventDefault()
         });
+    });
+
+    // Set active nav item based on current page
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        const linkPath = new URL(link.href).pathname;
+        if (linkPath === currentPath || (currentPath.includes(linkPath) && linkPath !== '/')) {
+            link.classList.add('active');
+        }
     });
 });

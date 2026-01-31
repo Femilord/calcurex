@@ -156,7 +156,8 @@ body {
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 75px;
-    z-index: 99;
+    z-index: 999;
+    /* INCREASED FROM 99 */
     box-shadow: var(--shadow);
 }
 
@@ -197,6 +198,12 @@ body {
     font-size: 0.9rem;
     white-space: nowrap;
     transition: var(--transition);
+    cursor: pointer;
+    /* ENSURE POINTER */
+    pointer-events: auto;
+    /* ENSURE CLICKABLE */
+    position: relative;
+    /* ENSURE PROPER STACKING */
 }
 
 .nav-menu li a:hover,
@@ -210,7 +217,7 @@ body {
 
 /* Main Content */
 .main-content {
-    padding: 2rem 0 4rem;
+    padding: 0 0 4rem;
 }
 
 /* Content Grid with Ads */
@@ -2391,4 +2398,120 @@ option {
     background: #ff6b6b;
     color: white;
     box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+/* Individual Calculator Pages Styles */
+.page-header {
+    text-align: center;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, var(--primary-color, #3b82f6) 0%, var(--primary-dark, #2563eb) 100%);
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header .page-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    font-weight: 400;
+}
+
+.description-section {
+    background: var(--section-bg, #f8fafc);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--primary-color, #3b82f6);
+}
+
+.description-section h2 {
+    color: var(--primary-color, #3b82f6);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.description-section p {
+    line-height: 1.8;
+    color: var(--text-color, #1e293b);
+    font-size: 1.1rem;
+}
+
+.calculator-list-section {
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.calculator-list-section h2 {
+    color: var(--heading-color, #1e293b);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.calculator-feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.calculator-feature-list li {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    background: var(--section-bg, #f8fafc);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color, #3b82f6);
+    transition: all 0.3s ease;
+}
+
+.calculator-feature-list li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+}
+
+.calculator-feature-list li strong {
+    color: var(--primary-color, #3b82f6);
+    font-size: 1.05rem;
+}
+
+/* Dark mode support for individual pages */
+@media (prefers-color-scheme: dark) {
+    .description-section {
+        background: var(--section-bg-dark, #1e293b);
+    }
+
+    .description-section p {
+        color: var(--text-color-dark, #e2e8f0);
+    }
+
+    .calculator-list-section {
+        background: var(--bg-dark, #0f172a);
+    }
+
+    .calculator-feature-list li {
+        background: var(--section-bg-dark, #1e293b);
+        color: var(--text-color-dark, #e2e8f0);
+    }
+}
+
+/* Active Navigation Highlighting */
+.calc-nav .nav-menu li a.active {
+    background: var(--primary-color, #3b82f6);
+    color: white;
+    font-weight: 600;
+}
+
+.calc-nav .nav-menu li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--primary-color, #3b82f6);
 }
