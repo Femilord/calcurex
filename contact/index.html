@@ -140,24 +140,6 @@
     </script>
 </head>
 
-<!-- Breadcrumb Navigation (Add to body after header) -->
-<div class="container">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="https://calcrex.com/">
-                    <span itemprop="name">Home</span>
-                </a>
-                <meta itemprop="position" content="1" />
-            </li>
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <span itemprop="name">Contact</span>
-                <meta itemprop="position" content="2" />
-            </li>
-        </ol>
-    </nav>
-</div>
-
 <body>
     <!-- Header -->
     <header class="site-header">
@@ -210,6 +192,24 @@
             </ul>
         </div>
     </nav>
+
+    <!-- Breadcrumb Navigation (Add to body after header) -->
+    <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="https://calcrex.com/">
+                        <span itemprop="name">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">Contact</span>
+                    <meta itemprop="position" content="2" />
+                </li>
+            </ol>
+        </nav>
+    </div>
 
     <!-- Main Content -->
     <main class="page-content">
@@ -320,6 +320,7 @@
         </div>
     </main>
 
+    
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
@@ -331,25 +332,26 @@
                     <p>Complete Calculator Suite - Free Forever</p>
                     <p class="footer-description">Your all-in-one solution for calculations, conversions, and more.</p>
                 </div>
-
+    
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="#calculator"><i class="fas fa-calculator"></i> Calculator</a></li>
-                        <li><a href="#converters"><i class="fas fa-exchange-alt"></i> Converters</a></li>
-                        <li><a href="#physics"><i class="fas fa-atom"></i> Physics</a></li>
-                        <li><a href="#chemistry"><i class="fas fa-vial"></i> Chemistry</a></li>
-                        <li><a href="#computer-science"><i class="fas fa-laptop-code"></i> Computer Science</a></li>
-                        <li><a href="#finance"><i class="fas fa-dollar-sign"></i> Finance</a></li>
-                        <li><a href="#date-time"><i class="fas fa-clock"></i> Date & Time</a></li>
+                        <li><a href="/"><i class="fas fa-calculator"></i> Calculator</a></li>
+                        <li><a href="/computer-science/"><i class="fas fa-laptop-code"></i> Computer Science</a></li>
+                        <li><a href="/converters"><i class="fas fa-exchange-alt"></i> Converters</a></li>
+                        <li><a href="/physics"><i class="fas fa-atom"></i> Physics</a></li>
+                        <li><a href="/chemistry"><i class="fas fa-vial"></i> Chemistry</a></li>
+                        <li><a href="/electricity"><i class="fas fa-bolt"></i> Electricity</a></li>
+                        <li><a href="/finance"><i class="fas fa-dollar-sign"></i> Finance</a></li>
+                        <li><a href="/date-time"><i class="fas fa-clock"></i> Date & Time</a></li>
                     </ul>
                 </div>
-
+    
                 <div class="footer-section">
                     <h4>Information</h4>
                     <ul class="footer-links">
                         <li><a href="/about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="/contact"><i class="fas fa-envelope"></i> Contact</a></li>
                         <li><a href="/policy-document"><i class="fas fa-shield-alt"></i> Policy Document</a></li>
                         <li><a href="/policy-document#privacy-policy"><i class="fas fa-file-contract"></i> Privacy
                                 Policy</a></li>
@@ -357,7 +359,7 @@
                                 Service</a></li>
                     </ul>
                 </div>
-
+    
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <div class="social-links">
@@ -366,32 +368,33 @@
                         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     </div>
-
-
+    
+    
                 </div>
             </div>
-
+    
             <!-- Donation Button 
-            <div class="header-actions">
-              
-                <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" target="_blank" rel="noopener noreferrer"
-                    class="donate-btn">
-                    <i class="fas fa-heart"></i>
-                    <span class="donate-text">
-                        <span class="donate-main">Support Us</span>
-                        <span class="donate-sub">Buy us a coffee</span>
-                    </span>
-                   
-                    <i class="fab fa-paypal"></i>
-                </a>
-            -->
+                <div class="header-actions">
+                  
+                    <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" target="_blank" rel="noopener noreferrer"
+                        class="donate-btn">
+                        <i class="fas fa-heart"></i>
+                        <span class="donate-text">
+                            <span class="donate-main">Support Us</span>
+                            <span class="donate-sub">Buy us a coffee</span>
+                        </span>
+                       
+                        <i class="fab fa-paypal"></i>
+                    </a>
+                -->
         </div>
-
+    
         <div class="footer-bottom">
             <p>&copy; 2025 CalcRex. All rights reserved.</p>
         </div>
         </div>
     </footer>
+
 
     <script src="js/theme.js"></script>
     <script>

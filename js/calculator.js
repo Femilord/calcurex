@@ -13,19 +13,22 @@ const CalcApp = {
     waitingForNewValue: false,
 
     init() {
-        // Get DOM elements
-        this.displayElement = document.getElementById('calc-display');
-        this.historyElement = document.getElementById('calc-history');
-        this.buttonsContainer = document.getElementById('calc-buttons');
+    this.displayElement = document.getElementById('calc-display');
+    this.historyElement = document.getElementById('calc-history');
+    this.buttonsContainer = document.getElementById('calc-buttons');
 
-        if (!this.displayElement || !this.historyElement || !this.buttonsContainer) {
-            console.error('Calculator elements not found');
-            return;
-        }
+    if (!this.displayElement || !this.historyElement || !this.buttonsContainer) {
+        return;
+    }
 
-        this.switchMode('basic');
-        this.setupKeyboard();
-    },
+    // Force visibility via JS
+    this.buttonsContainer.style.display = 'grid';
+    this.buttonsContainer.style.visibility = 'visible';
+    this.buttonsContainer.style.opacity = '1';
+
+    this.switchMode('basic');
+    this.setupKeyboard();
+},
 
     setupKeyboard() {
         document.addEventListener('keydown', (e) => {
@@ -280,17 +283,20 @@ const CalcApp = {
 
         if (mode === 'basic') {
             angleMode.style.display = 'none';
-            container.style.maxWidth = '400px';
+            // Responsive max-width: use 100% on small screens, 400px on larger
+            container.style.maxWidth = window.innerWidth < 500 ? '100%' : '400px';
             this.buttonsContainer.className = 'calc-buttons basic-grid';
             this.renderBasicButtons();
         } else if (mode === 'scientific') {
             angleMode.style.display = 'flex';
-            container.style.maxWidth = '600px';
+            // Responsive max-width: use 100% on small screens, 600px on larger
+            container.style.maxWidth = window.innerWidth < 700 ? '100%' : '600px';
             this.buttonsContainer.className = 'calc-buttons scientific-grid';
             this.renderScientificButtons();
         } else if (mode === 'advanced') {
             angleMode.style.display = 'flex';
-            container.style.maxWidth = '600px';
+            // Responsive max-width: use 100% on small screens, 600px on larger
+            container.style.maxWidth = window.innerWidth < 700 ? '100%' : '600px';
             this.buttonsContainer.className = 'calc-buttons advanced-grid';
             this.renderAdvancedButtons();
         }
@@ -324,6 +330,11 @@ const CalcApp = {
             <button class="calc-btn num-btn" onclick="CalcApp.inputDecimal()">.</button>
             <button class="calc-btn equals-btn" onclick="CalcApp.calculate()">=</button>
         `;
+        
+        // Force display
+        this.buttonsContainer.style.display = 'grid';
+        this.buttonsContainer.style.minHeight = '300px';
+        console.log('Basic buttons rendered, button count:', this.buttonsContainer.children.length);
     },
 
     renderScientificButtons() {
@@ -429,4 +440,14 @@ function switchCalcMode(mode) {
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     CalcApp.init();
+    
+    // Handle window resize (for orientation changes and responsive behavior)
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            // Re-apply current mode to adjust max-width
+            CalcApp.switchMode(CalcApp.mode);
+        }, 250);
+    });
 });
