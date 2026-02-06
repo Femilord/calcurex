@@ -48,9 +48,6 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png">
-    <!-- <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#3b82f6">
     <meta name="msapplication-TileColor" content="#3b82f6">
@@ -124,24 +121,6 @@
     </script>
 </head>
 
-<!-- Breadcrumb Navigation (Add to body after header) -->
-<div class="container">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="https://calcrex.com/">
-                    <span itemprop="name">Home</span>
-                </a>
-                <meta itemprop="position" content="1" />
-            </li>
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <span itemprop="name">Unit Converters</span>
-                <meta itemprop="position" content="2" />
-            </li>
-        </ol>
-    </nav>
-</div>
-
 <body>
     <!-- Header -->
     <header class="site-header">
@@ -154,21 +133,6 @@
             </a>
 
             <div class="header-actions">
-
-                <!-- Donation Button 
-                <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="donate-btn">
-                    <i class="fas fa-heart"></i> 
-                    <span class="donate-text">
-                        <span class="donate-main">Support Us</span>
-                        <span class="donate-sub">Buy us a coffee</span>
-                    </span>
-                   
-                    <i class="fab fa-paypal"></i>
-                </a> -->
-
                 <!-- Theme Toggle -->
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
                     <i class="fas fa-moon"></i>
@@ -178,7 +142,6 @@
     </header>
 
     <!-- Sticky Navigation -->
-
     <nav class="calc-nav">
         <div class="container">
             <ul class="nav-menu">
@@ -194,6 +157,24 @@
             </ul>
         </div>
     </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="https://calcrex.com/">
+                        <span itemprop="name">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">Unit Converters</span>
+                    <meta itemprop="position" content="2" />
+                </li>
+            </ol>
+        </nav>
+    </div>
 
     <main class="main-content">
         <div class="container">
@@ -238,59 +219,49 @@
                     <div class="calculator-list-content">
                         <ul class="calculator-feature-list">
                             <li><strong>Length Converters</strong> - Meters, feet, inches, kilometers, miles, yards,
-                                centimeters,
-                                millimeters, nautical miles</li>
+                                centimeters, millimeters, nautical miles</li>
                             <li><strong>Weight/Mass Converters</strong> - Kilograms, pounds, ounces, grams, tons,
-                                stones,
-                                carats
-                            </li>
+                                stones, carats</li>
                             <li><strong>Temperature Converters</strong> - Celsius, Fahrenheit, Kelvin conversions</li>
                             <li><strong>Area Converters</strong> - Square meters, square feet, acres, hectares, square
                                 kilometers, square miles</li>
                             <li><strong>Volume Converters</strong> - Liters, gallons, milliliters, cups, fluid ounces,
-                                cubic
-                                meters, pints, quarts</li>
+                                cubic meters, pints, quarts</li>
                             <li><strong>Speed Converters</strong> - Miles per hour (mph), kilometers per hour (km/h),
-                                meters per
-                                second, knots</li>
+                                meters per second, knots</li>
                             <li><strong>Time Converters</strong> - Seconds, minutes, hours, days, weeks, months, years
                             </li>
                             <li><strong>Data Storage Converters</strong> - Bytes, kilobytes, megabytes, gigabytes,
-                                terabytes,
-                                bits</li>
+                                terabytes, bits</li>
                             <li><strong>Energy Converters</strong> - Joules, calories, kilocalories, watt-hours,
-                                kilowatt-hours,
-                                BTU</li>
+                                kilowatt-hours, BTU</li>
                             <li><strong>Pressure Converters</strong> - Pascal, bar, PSI, atmosphere, torr, mmHg</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <div class="container">
-                <div class="content-grid-with-ads">
-
-                    <!-- Left AdSense Sidebar -->
-                    <aside class="ad-sidebar ad-sidebar-left">
-                        <div class="ad-sticky">
-                            <div class="ad-unit">
-                                <p class="ad-label">Advertisement</p>
-                                <div class="ad-placeholder ad-300x600">
-                                    <!-- Google AdSense Code Here -->
-                                    <p>300x600</p>
-                                </div>
-                            </div>
-                            <div class="ad-unit">
-                                <p class="ad-label">Advertisement</p>
-                                <div class="ad-placeholder ad-300x250">
-                                    <!-- Google AdSense Code Here -->
-                                    <p>300x250</p>
-                                </div>
+            <div class="content-grid-with-ads">
+                <!-- Left AdSense Sidebar -->
+                <aside class="ad-sidebar ad-sidebar-left">
+                    <div class="ad-sticky">
+                        <div class="ad-unit">
+                            <p class="ad-label">Advertisement</p>
+                            <div class="ad-placeholder ad-300x600">
+                                <p>300x600</p>
                             </div>
                         </div>
-                    </aside>
+                        <div class="ad-unit">
+                            <p class="ad-label">Advertisement</p>
+                            <div class="ad-placeholder ad-300x250">
+                                <p>300x250</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
 
-                    <!-- 2. CONVERTERS SECTION -->
+                <!-- 2. CONVERTERS SECTION -->
+                <div class="main-calculator-content">
                     <section id="converters" class="calculator-section">
                         <h2 class="section-title"><i class="fas fa-exchange-alt"></i> Unit Converters</h2>
 
@@ -316,11 +287,13 @@
                                     <label for="conv-from-unit">From:</label>
                                     <select id="conv-from-unit" onchange="ConverterApp.convert()"></select>
                                     <input type="text" id="conv-from-value" class="number-input"
-                                        placeholder="Enter value">
+                                        placeholder="Enter value" inputmode="decimal">
                                 </div>
 
                                 <div class="swap-btn">
-                                    <button onclick="ConverterApp.swap()"><i class="fas fa-exchange-alt"></i></button>
+                                    <button onclick="ConverterApp.swap()" aria-label="Swap units">
+                                        <i class="fas fa-exchange-alt"></i>
+                                    </button>
                                 </div>
 
                                 <div class="input-group">
@@ -332,29 +305,26 @@
                             </div>
                         </div>
                     </section>
+                </div>
 
-                    <!-- Right AdSense Sidebar -->
-                    <aside class="ad-sidebar ad-sidebar-right">
-                        <div class="ad-sticky">
-                            <div class="ad-unit">
-                                <p class="ad-label">Advertisement</p>
-                                <div class="ad-placeholder ad-300x600">
-                                    <!-- Google AdSense Code Here -->
-                                    <p>300x600</p>
-                                </div>
-                            </div>
-                            <div class="ad-unit">
-                                <p class="ad-label">Advertisement</p>
-                                <div class="ad-placeholder ad-300x250">
-                                    <!-- Google AdSense Code Here -->
-                                    <p>300x250</p>
-                                </div>
+                <!-- Right AdSense Sidebar -->
+                <aside class="ad-sidebar ad-sidebar-right">
+                    <div class="ad-sticky">
+                        <div class="ad-unit">
+                            <p class="ad-label">Advertisement</p>
+                            <div class="ad-placeholder ad-300x600">
+                                <p>300x600</p>
                             </div>
                         </div>
-                    </aside>
-                </div>
+                        <div class="ad-unit">
+                            <p class="ad-label">Advertisement</p>
+                            <div class="ad-placeholder ad-300x250">
+                                <p>300x250</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
             </div>
-
         </div>
     </main>
 
@@ -371,9 +341,9 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="/#calculator"><i class="fas fa-calculator"></i> Calculator</a></li>
+                        <li><a href="/"><i class="fas fa-calculator"></i> Calculator</a></li>
                         <li><a href="/computer-science"><i class="fas fa-laptop-code"></i> Computer Science</a></li>
-                        <li><a href="/converterss"><i class="fas fa-exchange-alt"></i> Converters</a></li>
+                        <li><a href="/converters"><i class="fas fa-exchange-alt"></i> Converters</a></li>
                         <li><a href="/physics"><i class="fas fa-atom"></i> Physics</a></li>
                         <li><a href="/chemistry"><i class="fas fa-vial"></i> Chemistry</a></li>
                         <li><a href="/electricity"><i class="fas fa-bolt"></i> Electricity</a></li>
@@ -396,9 +366,9 @@
         </div>
     </footer>
 
-    <script src="../js/theme.js"></script>
-    <script src="../js/collapsible.js"></script>
-    <script src="../js/converters.js"></script>
+    <script src="/js/theme.js"></script>
+    <script src="/js/collapsible.js"></script>
+    <script src="/js/converter.js"></script>
 </body>
 
 </html>

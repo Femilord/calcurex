@@ -1,0 +1,211 @@
+/* ========================================
+   COLLAPSIBLE SECTIONS STYLES
+   For page-header, description-section, and calculator-list-section
+======================================== */
+
+/* Compact Page Header */
+.page-header {
+    text-align: center;
+    padding: 1rem 0;
+    background: var(--surface-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    margin-bottom: 1.5rem;
+}
+
+.page-header h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.page-header h1 i {
+    color: var(--primary-color);
+}
+
+.page-header .page-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+/* Collapsible Section Container */
+.collapsible-section {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.collapsible-section:hover {
+    border-color: var(--primary-color);
+}
+
+/* Collapsible Header */
+.collapsible-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.875rem 1.25rem;
+    background: var(--surface-elevated);
+    cursor: pointer;
+    user-select: none;
+    transition: var(--transition);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.collapsible-header:hover {
+    background: var(--surface-hover);
+}
+
+.collapsible-header h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.collapsible-header h2 i {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+/* Toggle Button */
+.collapse-toggle {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius);
+    background: var(--primary-color);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.collapse-toggle:hover {
+    background: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.collapse-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.collapsible-section.collapsed .collapse-toggle i {
+    transform: rotate(180deg);
+}
+
+/* Collapsible Content */
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.collapsible-section:not(.collapsed) .collapsible-content {
+    max-height: 2000px;
+    transition: max-height 0.5s ease-in;
+}
+
+/* Description Section Content */
+.description-content {
+    padding: 1.25rem;
+}
+
+.description-content p {
+    line-height: 1.7;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Calculator List Section Content */
+.calculator-list-content {
+    padding: 1.25rem;
+}
+
+.calculator-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.calculator-feature-list li {
+    padding: 0.75rem 1rem;
+    background: var(--surface-elevated);
+    border-radius: var(--radius);
+    border-left: 3px solid var(--primary-color);
+    transition: var(--transition);
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+.calculator-feature-list li:hover {
+    transform: translateX(5px);
+    background: var(--surface-hover);
+    box-shadow: var(--shadow-sm);
+}
+
+.calculator-feature-list li strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Light Mode Adjustments */
+body.light-mode .collapsible-section {
+    background: var(--surface-color);
+}
+
+body.light-mode .collapsible-header {
+    background: var(--surface-elevated);
+}
+
+body.light-mode .collapsible-header:hover {
+    background: var(--surface-hover);
+}
+
+body.light-mode .calculator-feature-list li {
+    background: var(--surface-elevated);
+}
+
+body.light-mode .calculator-feature-list li:hover {
+    background: var(--surface-hover);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .page-header .page-subtitle {
+        font-size: 0.875rem;
+    }
+    
+    .collapsible-header h2 {
+        font-size: 1rem;
+    }
+    
+    .description-content p {
+        font-size: 0.875rem;
+    }
+    
+    .calculator-feature-list li {
+        font-size: 0.85rem;
+    }
+}

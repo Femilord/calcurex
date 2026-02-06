@@ -509,7 +509,6 @@
 
     <script src="js/theme.js"></script>
     <script src="js/calculator.js"></script>
-    <script> src="js/collapsible.js"</script>
 
 </body>
 
