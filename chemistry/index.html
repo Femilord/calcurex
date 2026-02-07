@@ -44,7 +44,7 @@
     <meta name="twitter:title" content="Chemistry Calculators - CalcRex | 8+ Free Chemistry Tools">
     <meta name="twitter:description"
         content="Perform accurate chemistry calculations with 8+ tools for molarity, pH, molecular weight, and stoichiometry.">
-    <meta name="twitter:image" content="https://calcrex.com/images/twitter-chemistry.jpg">
+    <meta name="twitter:image" content="https://calcrex.com/img/twitter-chemistry.jpg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png">
@@ -52,13 +52,11 @@
         <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/unified.css">
-    <link rel="stylesheet" href="/css/collapsible.css">
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/chemistry.css">
+    <link rel="stylesheet" href="/css/pages.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Structured Data - Breadcrumbs -->
@@ -96,7 +94,7 @@
         "name": "CalcRex",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://calcrex.com/images/logo.png"
+          "url": "https://calcrex.com/img/logo.png"
         }
       }
     }
@@ -118,292 +116,246 @@
     </script>
 </head>
 
-
-
 <body>
-    <!-- Header -->
+    <!-- Header Section -->
     <header class="site-header">
-        <div class="container">
-            <a href="/">
-                <div class="logo">
-                    <i class="fas fa-calculator"></i>
-                    <h1>CalcRex</h1>
-                </div>
-            </a>
-
-            <div class="header-actions">
-
-                <!-- Donation Button 
-                <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="donate-btn">
-                    <i class="fas fa-heart"></i> 
-                    <span class="donate-text">
-                        <span class="donate-main">Support Us</span>
-                        <span class="donate-sub">Buy us a coffee</span>
-                    </span>
-                   
-                    <i class="fab fa-paypal"></i>
-                </a> -->
-
-                <!-- Theme Toggle -->
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/">
+                    <span class="logo-text">Calc<span class="logo-highlight">REX</span></span>
+                </a>
             </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Calculator</a></li>
+                    <li><a href="/converters" class="nav-link">Unit Converter</a></li>
+                    <li><a href="/physics" class="nav-link">Physics</a></li>
+                    <li><a href="/chemistry" class="nav-link active">Chemistry</a></li>
+                    <li><a href="/electricity" class="nav-link">Electronics</a></li>
+                    <li><a href="/computer-science" class="nav-link">Computer Science</a></li>
+                    <li><a href="/finance" class="nav-link">Finance</a></li>
+                    <li><a href="/date-time" class="nav-link">Date & Time</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Sticky Navigation -->
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="intro-container">
+            <h1 class="intro-title">Comprehensive Chemistry Calculators - Solve Any Chemistry Problem</h1>
 
-    <nav class="calc-nav">
-        <div class="container">
-            <ul class="nav-menu">
-                <li><a href="/"><i class="fas fa-calculator" aria-hidden="true"></i> Calculator</a></li>
-                <li><a href="/converters"><i class="fas fa-exchange-alt" aria-hidden="true"></i> Converters</a></li>
-                <li><a href="/physics"><i class="fas fa-atom" aria-hidden="true"></i> Physics</a></li>
-                <li><a href="/chemistry"><i class="fas fa-vial" aria-hidden="true"></i> Chemistry</a></li>
-                <li><a href="/electricity"><i class="fas fa-bolt" aria-hidden="true"></i> Electricity</a></li>
-                <li><a href="/computer-science"><i class="fas fa-laptop-code" aria-hidden="true"></i> Computer
-                        Science</a></li>
-                <li><a href="/finance"><i class="fas fa-dollar-sign" aria-hidden="true"></i> Finance</a></li>
-                <li><a href="/date-time"><i class="fas fa-clock" aria-hidden="true"></i> Date & Time</a></li>
-            </ul>
+            <div class="intro-content" id="introContent">
+                <p class="intro-text">
+                    Master chemistry calculations with CalcREX's comprehensive suite of chemistry calculators. From
+                    molarity and pH calculations to stoichiometry, gas laws, thermochemistry, and electrochemistry, our
+                    tools provide instant, accurate solutions for students, educators, researchers, and professionals.
+                    Each calculator includes balanced equations, step-by-step explanations, and practical applications.
+                </p>
+            </div>
+
+            <button class="read-more-btn" id="readMoreBtn">
+                <span class="btn-text">Read More</span>
+                <span class="btn-icon">▼</span>
+            </button>
         </div>
-    </nav>
+    </section>
 
-
+    <!-- Main Content Wrapper -->
     <main class="main-content">
-        <div class="container">
-            <div class="page-header">
-                <!-- Breadcrumb Navigation (Add to body after header) -->
-                <nav class="breadcrumb" aria-label="Breadcrumb">
-                    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                            <a itemprop="item" href="https://calcrex.com/">
-                                <span itemprop="name">Home</span>
-                            </a>
-                            <meta itemprop="position" content="1" />
-                        </li>
-                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                            <span itemprop="name">Chemistry Calculators</span>
-                            <meta itemprop="position" content="2" />
-                        </li>
-                    </ol>
-                </nav>
+        <!-- Google AdSense - Left Sidebar -->
+        <div class="ad-container ad-left">
+            <div class="ad-placeholder">
+                <span class="ad-label">AdSense</span>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                    data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            </div>
+        </div>
 
-
-                <div class="page-header-content">
-                    <h1><i class="fas fa-flask"></i> Chemistry Calculators</h1>
-                    <p class="page-subtitle">Solve chemistry problems with accurate molecular and chemical calculations
-                    </p>
-                </div>
+        <!-- Chemistry Calculator Container -->
+        <div class="chemistry-container">
+            <!-- Category Selector -->
+            <div class="category-selector">
+                <button class="category-btn active" data-category="solutions">Solutions</button>
+                <button class="category-btn" data-category="stoichiometry">Stoichiometry</button>
+                <button class="category-btn" data-category="gas-laws">Gas Laws</button>
+                <button class="category-btn" data-category="acids-bases">Acids & Bases</button>
+                <button class="category-btn" data-category="thermochemistry">Thermochemistry</button>
+                <button class="category-btn" data-category="electrochemistry">Electrochemistry</button>
+                <button class="category-btn" data-category="kinetics">Kinetics</button>
+                <button class="category-btn" data-category="nuclear">Nuclear</button>
             </div>
 
-            <!-- Description Section - Collapsible -->
-            <section class="collapsible-section collapsed">
-                <div class="collapsible-header">
-                    <h2><i class="fas fa-info-circle"></i> About Chemistry Calculators</h2>
-                    <button class="collapse-toggle" aria-label="Toggle section">
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
+            <!-- Calculator Selection -->
+            <div class="calculator-selection">
+                <label class="selection-label">Select Calculator</label>
+                <select class="calculator-select" id="calculatorSelect">
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+            </div>
+
+            <!-- Calculator Interface -->
+            <div class="calculator-interface">
+                <div class="calculator-header">
+                    <h2 id="calculatorTitle">Select a Calculator</h2>
                 </div>
-                <div class="collapsible-content">
-                    <div class="description-content">
-                        <p>
-                            Perform accurate <strong>chemistry calculations</strong> with our specialized tools for
-                            <strong>molarity</strong>, <strong>pH</strong>, <strong>molecular weight</strong>, and
-                            <strong>stoichiometry</strong>. Perfect for chemistry students, lab technicians, and
-                            researchers
-                            who need quick, reliable chemical calculations for experiments and coursework.
-                        </p>
+
+                <!-- Formula Display -->
+                <div class="formula-display" id="formulaDisplay">
+                    <div class="formula-label">Formula:</div>
+                    <div class="formula-equation" id="formulaEquation">-</div>
+                </div>
+
+                <!-- Input Fields -->
+                <div class="input-fields" id="inputFields">
+                    <!-- Will be dynamically populated -->
+                </div>
+
+                <!-- Calculate Button -->
+                <button class="calculate-btn" id="calculateBtn">
+                    <span>Calculate</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 8v8M8 12h8" />
+                    </svg>
+                </button>
+
+                <!-- Result Display -->
+                <div class="result-display" id="resultDisplay">
+                    <div class="result-label">Result:</div>
+                    <div class="result-value" id="resultValue">-</div>
+                    <div class="result-unit" id="resultUnit"></div>
+                </div>
+
+                <!-- Explanation Section -->
+                <div class="explanation-section" id="explanationSection">
+                    <h3>How it works</h3>
+                    <p id="explanationText"></p>
+                </div>
+
+                <!-- Periodic Table Quick Reference -->
+                <div class="periodic-reference">
+                    <h3>Common Elements</h3>
+                    <div class="elements-grid">
+                        <div class="element-item">
+                            <span class="element-symbol">H</span>
+                            <span class="element-name">Hydrogen</span>
+                            <span class="element-mass">1.008</span>
+                        </div>
+                        <div class="element-item">
+                            <span class="element-symbol">C</span>
+                            <span class="element-name">Carbon</span>
+                            <span class="element-mass">12.011</span>
+                        </div>
+                        <div class="element-item">
+                            <span class="element-symbol">N</span>
+                            <span class="element-name">Nitrogen</span>
+                            <span class="element-mass">14.007</span>
+                        </div>
+                        <div class="element-item">
+                            <span class="element-symbol">O</span>
+                            <span class="element-name">Oxygen</span>
+                            <span class="element-mass">15.999</span>
+                        </div>
+                        <div class="element-item">
+                            <span class="element-symbol">Na</span>
+                            <span class="element-name">Sodium</span>
+                            <span class="element-mass">22.990</span>
+                        </div>
+                        <div class="element-item">
+                            <span class="element-symbol">Cl</span>
+                            <span class="element-name">Chlorine</span>
+                            <span class="element-mass">35.453</span>
+                        </div>
                     </div>
                 </div>
-            </section>
 
-            <!-- Available Calculators List - Collapsible -->
-            <section class="collapsible-section collapsed">
-                <div class="collapsible-header">
-                    <h2><i class="fas fa-list"></i> Available Chemistry Calculators (8)</h2>
-                    <button class="collapse-toggle" aria-label="Toggle section">
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                </div>
-                <div class="collapsible-content">
-                    <div class="calculator-list-content">
-                        <ul class="calculator-feature-list">
-                            <li><strong>Molarity Calculator</strong> - Calculate solution concentration M = n/V</li>
-                            <li><strong>Dilution Calculator</strong> - Solve dilution problems M₁V₁ = M₂V₂</li>
-                            <li><strong>Molecular Weight Calculator</strong> - Calculate molecular mass from chemical
-                                formulas</li>
-                            <li><strong>Percent Composition Calculator</strong> - Find elemental composition percentages
-                            </li>
-                            <li><strong>Ideal Gas Law Calculator</strong> - Solve PV = nRT equations</li>
-                            <li><strong>pH Calculator</strong> - Calculate pH, pOH, and hydrogen ion concentration</li>
-                            <li><strong>Density Calculator</strong> - Find density using ρ = m/V</li>
-                            <li><strong>Percent Yield Calculator</strong> - Calculate reaction efficiency and yields
-                            </li>
-                        </ul>
+                <!-- Constants Reference -->
+                <div class="constants-reference">
+                    <h3>Important Constants</h3>
+                    <div class="constants-grid">
+                        <div class="constant-item">
+                            <span class="constant-name">Avogadro's Number (Nₐ)</span>
+                            <span class="constant-value">6.022×10²³ mol⁻¹</span>
+                        </div>
+                        <div class="constant-item">
+                            <span class="constant-name">Gas Constant (R)</span>
+                            <span class="constant-value">8.314 J/(mol⋅K)</span>
+                        </div>
+                        <div class="constant-item">
+                            <span class="constant-name">Faraday Constant (F)</span>
+                            <span class="constant-value">96,485 C/mol</span>
+                        </div>
+                        <div class="constant-item">
+                            <span class="constant-name">STP Temperature</span>
+                            <span class="constant-value">273.15 K (0°C)</span>
+                        </div>
                     </div>
-                </div>
-            </section>
-
-            <!-- Calculator Content with Ads -->
-            <div class="container">
-                <div class="content-grid-with-ads">
-
-                    <!-- Left AdSense Sidebar -->
-                    <aside class="ad-sidebar ad-sidebar-left">
-                        <div class="ad-sticky">
-                            <div class="ad-unit">
-                                <p class="ad-label">Advertisement</p>
-                                <div class="ad-placeholder ad-300x600">
-                                    <!-- Google AdSense Code Here -->
-                                    <p>300x600</p>
-                                </div>
-                            </div>
-                            <div class="ad-unit">
-                                <p class="ad-label">Advertisement</p>
-                                <div class="ad-placeholder ad-300x250">
-                                    <!-- Google AdSense Code Here -->
-                                    <p>300x250</p>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
-
-
-                    <!-- 4. CHEMISTRY SECTION -->
-                    <section id="chemistry" class="calculator-section">
-                        <h2 class="section-title"><i class="fas fa-vial"></i> Chemistry Calculators</h2>
-
-                        <div class="chemistry-container">
-                            <div class="chemistry-type-select">
-                                <label for="chem-type">Chemistry Calculator:</label>
-                                <select id="chem-type" onchange="ChemistryApp.changeType()">
-                                    <option value="molarity">Molarity (M = n/V)</option>
-                                    <option value="dilution">Dilution (M₁V₁ = M₂V₂)</option>
-                                    <option value="molecular-weight">Molecular Weight</option>
-                                    <option value="percent-composition">Percent Composition</option>
-                                    <option value="ideal-gas">Ideal Gas Law (PV = nRT)</option>
-                                    <option value="ph">pH Calculator</option>
-                                    <option value="density">Density (ρ = m/V)</option>
-                                    <option value="percent-yield">Percent Yield</option>
-                                </select>
-                            </div>
-
-                            <div id="chem-inputs" class="chem-inputs"></div>
-
-                            <button class="calc-button" onclick="ChemistryApp.calculate()">Calculate</button>
-
-                            <div id="chem-result" class="chem-result"></div>
-                        </div>
-                    </section>
-
-
-                    <!-- Right AdSense Sidebar -->
-                    <aside class="ad-sidebar ad-sidebar-right">
-                        <div class="ad-sticky">
-                            <div class="ad-unit">
-                                <p class="ad-label">Advertisement</p>
-                                <div class="ad-placeholder ad-300x600">
-                                    <!-- Google AdSense Code Here -->
-                                    <p>300x600</p>
-                                </div>
-                            </div>
-                            <div class="ad-unit">
-                                <p class="ad-label">Advertisement</p>
-                                <div class="ad-placeholder ad-300x250">
-                                    <!-- Google AdSense Code Here -->
-                                    <p>300x250</p>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
                 </div>
             </div>
+        </div>
+
+        <!-- Google AdSense - Right Sidebar -->
+        <div class="ad-container ad-right">
+            <div class="ad-placeholder">
+                <span class="ad-label">AdSense</span>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                    data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            </div>
+        </div>
     </main>
 
-   
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="container">
+        <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <a href="/">
-                        <h3>CalcRex</h3>
-                    </a>
-                    <p>Complete Calculator Suite - Free Forever</p>
-                    <p class="footer-description">Your all-in-one solution for calculations, conversions, and more.</p>
+                    <h3>CalcREX</h3>
+                    <p>Your complete online calculator suite for every calculation need.</p>
                 </div>
-    
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="/"><i class="fas fa-calculator"></i> Calculator</a></li>
-                        <li><a href="/computer-science/"><i class="fas fa-laptop-code"></i> Computer Science</a></li>
-                        <li><a href="/converters"><i class="fas fa-exchange-alt"></i> Converters</a></li>
-                        <li><a href="/physics"><i class="fas fa-atom"></i> Physics</a></li>
-                        <li><a href="/chemistry"><i class="fas fa-vial"></i> Chemistry</a></li>
-                        <li><a href="/electricity"><i class="fas fa-bolt"></i> Electricity</a></li>
-                        <li><a href="/finance"><i class="fas fa-dollar-sign"></i> Finance</a></li>
-                        <li><a href="/date-time"><i class="fas fa-clock"></i> Date & Time</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
-    
                 <div class="footer-section">
-                    <h4>Information</h4>
+                    <h3>Feature Categories</h3>
                     <ul class="footer-links">
-                        <li><a href="/about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                        <li><a href="/contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                        <li><a href="/policy-document"><i class="fas fa-shield-alt"></i> Policy Document</a></li>
-                        <li><a href="/policy-document#privacy-policy"><i class="fas fa-file-contract"></i> Privacy
-                                Policy</a></li>
-                        <li><a href="/policy-document#terms-of-service"><i class="fas fa-file-contract"></i> Terms of
-                                Service</a></li>
+                        <li><a href="/converters">Unit Converter</a></li>
+                        <li><a href="/physics">Physics</a></li>
+                        <li><a href="/chemistry">Chemistry</a></li>
+                        <li><a href="/electricity">Electronics</a></li>
+                        <li><a href="/computer-science">Computer Science</a></li>
+                        <li><a href="/finance">Finance</a></li>
+                        <li><a href="/date-time">Date & Time</a></li>
                     </ul>
-                </div>
-    
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-    
-    
                 </div>
             </div>
-    
-            <!-- Donation Button 
-                <div class="header-actions">
-                  
-                    <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" target="_blank" rel="noopener noreferrer"
-                        class="donate-btn">
-                        <i class="fas fa-heart"></i>
-                        <span class="donate-text">
-                            <span class="donate-main">Support Us</span>
-                            <span class="donate-sub">Buy us a coffee</span>
-                        </span>
-                       
-                        <i class="fab fa-paypal"></i>
-                    </a>
-                -->
-        </div>
-    
-        <div class="footer-bottom">
-            <p>&copy; 2025 CalcRex. All rights reserved.</p>
-        </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CalcREX. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
+    <script src="/js/script.js"></script>
+    <script src="/js/chemistry.js"></script>
 
-    <script src="../js/theme.js"></script>
-    <script src="../js/collapsible.js"></script>
-    <script src="../js/chemistry.js"></script>
+    <!-- Google AdSense Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

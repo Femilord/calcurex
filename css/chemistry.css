@@ -1,0 +1,525 @@
+/* ========================================
+   CHEMISTRY CALCULATOR SPECIFIC STYLES
+   Extends styles.css with chemistry-specific design
+======================================== */
+
+/* ========================================
+   CHEMISTRY CONTAINER
+======================================== */
+.chemistry-container {
+    width: 100%;
+    max-width: 580px;
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    overflow: visible;
+    transition: max-width var(--transition-normal);
+}
+
+/* ========================================
+   CATEGORY SELECTOR
+======================================== */
+.category-selector {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-xs);
+    padding: var(--gap-md);
+    background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+    border-bottom: 2px solid #99f6e4;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.category-btn {
+    padding: 0.65rem 0.5rem;
+    border: none;
+    background: white;
+    color: #0f766e;
+    font-weight: 600;
+    font-size: 0.7rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-sm);
+    white-space: nowrap;
+}
+
+.category-btn:hover {
+    background: #f0fdfa;
+    transform: translateY(-1px);
+    border: 2px solid #5eead4;
+}
+
+.category-btn.active {
+    background: linear-gradient(135deg, #14b8a6, #0d9488);
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+/* ========================================
+   CALCULATOR SELECTION
+======================================== */
+.calculator-selection {
+    padding: var(--gap-md);
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-bottom: 2px solid #fcd34d;
+}
+
+.selection-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #92400e;
+    margin-bottom: var(--gap-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.calculator-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #fcd34d;
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1e293b;
+    background: white;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.calculator-select:focus {
+    outline: none;
+    border-color: #f59e0b;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+.calculator-select:hover {
+    border-color: #fbbf24;
+}
+
+/* ========================================
+   CALCULATOR INTERFACE
+======================================== */
+.calculator-interface {
+    padding: var(--gap-md);
+}
+
+.calculator-header {
+    margin-bottom: var(--gap-md);
+    padding-bottom: var(--gap-sm);
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.calculator-header h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+/* ========================================
+   FORMULA DISPLAY
+======================================== */
+.formula-display {
+    background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+    padding: var(--gap-md);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--gap-md);
+    border: 2px solid #c4b5fd;
+}
+
+.formula-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #6d28d9;
+    margin-bottom: var(--gap-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.formula-equation {
+    font-size: 1.125rem;
+    color: #5b21b6;
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+/* ========================================
+   INPUT FIELDS
+======================================== */
+.input-fields {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-md);
+    margin-bottom: var(--gap-md);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+}
+
+.input-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: var(--gap-xs);
+}
+
+.input-symbol {
+    font-family: 'Courier New', monospace;
+    color: #14b8a6;
+    font-weight: 700;
+}
+
+.input-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--gap-xs);
+}
+
+.chemistry-input {
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: var(--radius-md);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #1e293b;
+    background: white;
+    transition: all var(--transition-fast);
+}
+
+.chemistry-input:focus {
+    outline: none;
+    border-color: #14b8a6;
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.1);
+}
+
+.input-unit {
+    padding: 0.75rem;
+    background: #f0fdfa;
+    border: 2px solid #99f6e4;
+    border-radius: var(--radius-md);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #0f766e;
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========================================
+   CALCULATE BUTTON
+======================================== */
+.calculate-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #14b8a6, #0d9488);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-sm);
+    margin-bottom: var(--gap-md);
+}
+
+.calculate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, #0d9488, #0f766e);
+}
+
+.calculate-btn:active {
+    transform: translateY(0);
+}
+
+.calculate-btn svg {
+    transition: transform var(--transition-fast);
+}
+
+.calculate-btn:hover svg {
+    transform: rotate(90deg);
+}
+
+/* ========================================
+   RESULT DISPLAY
+======================================== */
+.result-display {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    padding: var(--gap-lg);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--gap-md);
+    border: 2px solid #fcd34d;
+    text-align: center;
+}
+
+.result-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #92400e;
+    margin-bottom: var(--gap-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.result-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #d97706;
+    font-family: 'Courier New', monospace;
+    margin-bottom: var(--gap-xs);
+    word-wrap: break-word;
+}
+
+.result-unit {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ea580c;
+}
+
+/* ========================================
+   EXPLANATION SECTION
+======================================== */
+.explanation-section {
+    background: #f8fafc;
+    padding: var(--gap-md);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--gap-md);
+    border: 2px solid #e2e8f0;
+}
+
+.explanation-section h3 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin: 0 0 var(--gap-sm) 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.explanation-section p {
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    color: #475569;
+    margin: 0;
+}
+
+/* ========================================
+   PERIODIC TABLE REFERENCE
+======================================== */
+.periodic-reference {
+    background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+    padding: var(--gap-md);
+    border-radius: var(--radius-lg);
+    border: 2px solid #5eead4;
+    margin-bottom: var(--gap-md);
+}
+
+.periodic-reference h3 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #0f766e;
+    margin: 0 0 var(--gap-sm) 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.elements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-xs);
+}
+
+.element-item {
+    background: white;
+    padding: var(--gap-sm);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    border: 2px solid #99f6e4;
+    transition: all var(--transition-fast);
+}
+
+.element-item:hover {
+    border-color: #14b8a6;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.element-symbol {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0d9488;
+    font-family: 'Courier New', monospace;
+}
+
+.element-name {
+    font-size: 0.65rem;
+    color: #475569;
+    font-weight: 500;
+}
+
+.element-mass {
+    font-size: 0.7rem;
+    color: #0f766e;
+    font-weight: 600;
+}
+
+/* ========================================
+   CONSTANTS REFERENCE
+======================================== */
+.constants-reference {
+    background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+    padding: var(--gap-md);
+    border-radius: var(--radius-lg);
+    border: 2px solid #c4b5fd;
+}
+
+.constants-reference h3 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #6d28d9;
+    margin: 0 0 var(--gap-sm) 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.constants-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-xs);
+}
+
+.constant-item {
+    background: white;
+    padding: var(--gap-sm);
+    border-radius: var(--radius-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    border: 1px solid #e9d5ff;
+}
+
+.constant-name {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.constant-value {
+    color: #7c3aed;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+======================================== */
+
+/* Small tablets and larger phones (576px+) */
+@media (min-width: 576px) {
+    .chemistry-container {
+        max-width: 600px;
+    }
+
+    .category-selector {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .category-btn {
+        font-size: 0.75rem;
+        padding: 0.75rem 0.5rem;
+    }
+
+    .calculator-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .input-fields {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .elements-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .constants-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets (768px+) */
+@media (min-width: 768px) {
+    .chemistry-container {
+        max-width: 640px;
+    }
+
+    .category-selector {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .category-btn {
+        font-size: 0.8125rem;
+    }
+
+    .formula-equation {
+        font-size: 1.25rem;
+    }
+
+    .result-value {
+        font-size: 2.5rem;
+    }
+
+    .elements-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/* Desktops (1024px+) */
+@media (min-width: 1024px) {
+    .chemistry-container {
+        max-width: 680px;
+    }
+
+    .calculator-header h2 {
+        font-size: 1.375rem;
+    }
+}
+
+/* Large desktops (1280px+) */
+@media (min-width: 1280px) {
+    .chemistry-container {
+        max-width: 720px;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+======================================== */
+@media print {
+
+    .category-selector,
+    .calculate-btn,
+    .periodic-reference,
+    .constants-reference {
+        display: none;
+    }
+
+    .chemistry-container {
+        box-shadow: none;
+    }
+}

@@ -44,22 +44,16 @@
     <meta name="twitter:title" content="Finance Calculators - CalcRex | 10+ Free Financial Tools">
     <meta name="twitter:description"
         content="Make informed financial decisions with free calculators for loans, investments, and more.">
-    <meta name="twitter:image" content="https://calcrex.com/images/twitter-finance.jpg">
+    <meta name="twitter:image" content="https://calcrex.com/img/twitter-finance.jpg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png">
-    <!-- <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/unified.css">
-    <link rel="stylesheet" href="/css/collapsible.css">
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/finance.css">
+    <link rel="stylesheet" href="/css/pages.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Structured Data - Breadcrumbs -->
@@ -97,7 +91,7 @@
         "name": "CalcRex",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://calcrex.com/images/logo.png"
+          "url": "https://calcrex.com/img/logo.png"
         }
       }
     }
@@ -126,294 +120,240 @@
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- Header Section -->
     <header class="site-header">
-        <div class="container">
-            <a href="/">
-                <div class="logo">
-                    <i class="fas fa-calculator"></i>
-                    <h1>CalcRex</h1>
-                </div>
-            </a>
-
-            <div class="header-actions">
-
-                <!-- Donation Button 
-                <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="donate-btn">
-                    <i class="fas fa-heart"></i> 
-                    <span class="donate-text">
-                        <span class="donate-main">Support Us</span>
-                        <span class="donate-sub">Buy us a coffee</span>
-                    </span>
-                   
-                    <i class="fab fa-paypal"></i>
-                </a> -->
-
-                <!-- Theme Toggle -->
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/">
+                    <span class="logo-text">Calc<span class="logo-highlight">REX</span></span>
+                </a>
             </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Calculator</a></li>
+                    <li><a href="/converters" class="nav-link">Unit Converter</a></li>
+                    <li><a href="/physics" class="nav-link">Physics</a></li>
+                    <li><a href="/chemistry" class="nav-link">Chemistry</a></li>
+                    <li><a href="/electricity" class="nav-link">Electronics</a></li>
+                    <li><a href="/computer-science" class="nav-link">Computer Science</a></li>
+                    <li><a href="/finance" class="nav-link active">Finance</a></li>
+                    <li><a href="/date-time" class="nav-link">Date & Time</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Sticky Navigation -->
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="intro-container">
+            <h1 class="intro-title">Comprehensive Finance Calculators - Master Your Money</h1>
 
-    <nav class="calc-nav">
-        <div class="container">
-            <ul class="nav-menu">
-                <li><a href="/"><i class="fas fa-calculator" aria-hidden="true"></i> Calculator</a></li>
-                <li><a href="/converters"><i class="fas fa-exchange-alt" aria-hidden="true"></i> Converters</a></li>
-                <li><a href="/physics"><i class="fas fa-atom" aria-hidden="true"></i> Physics</a></li>
-                <li><a href="/chemistry"><i class="fas fa-vial" aria-hidden="true"></i> Chemistry</a></li>
-                <li><a href="/electricity"><i class="fas fa-bolt" aria-hidden="true"></i> Electricity</a></li>
-                <li><a href="/computer-science"><i class="fas fa-laptop-code" aria-hidden="true"></i> Computer
-                        Science</a></li>
-                <li><a href="/finance"><i class="fas fa-dollar-sign" aria-hidden="true"></i> Finance</a></li>
-                <li><a href="/date-time"><i class="fas fa-clock" aria-hidden="true"></i> Date & Time</a></li>
-            </ul>
+            <div class="intro-content" id="introContent">
+                <p class="intro-text">
+                    Take control of your financial future with CalcREX's comprehensive suite of finance calculators.
+                    From simple interest calculations to complex investment analysis, mortgage planning, loan
+                    comparisons, retirement savings, ROI calculations, and business finance metrics, our tools provide
+                    instant, accurate solutions for individuals, investors, financial advisors, and business
+                    professionals. Each calculator includes formulas, detailed breakdowns, and practical financial
+                    insights.
+                </p>
+            </div>
+
+            <button class="read-more-btn" id="readMoreBtn">
+                <span class="btn-text">Read More</span>
+                <span class="btn-icon">▼</span>
+            </button>
         </div>
-    </nav>
+    </section>
 
-
+    <!-- Main Content Wrapper -->
     <main class="main-content">
-        <div class="container">
+        <!-- Google AdSense - Left Sidebar -->
+        <div class="ad-container ad-left">
+            <div class="ad-placeholder">
+                <span class="ad-label">AdSense</span>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                    data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            </div>
+        </div>
 
-            <div class="page-header">
-                <!-- Breadcrumb Navigation (Add to body after header) -->
-
-                <nav class="breadcrumb" aria-label="Breadcrumb">
-                    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                            <a itemprop="item" href="https://calcrex.com/">
-                                <span itemprop="name">Home</span>
-                            </a>
-                            <meta itemprop="position" content="1" />
-                        </li>
-                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                            <span itemprop="name">Finance Calculators</span>
-                            <meta itemprop="position" content="2" />
-                        </li>
-                    </ol>
-                </nav>
-
-
-
-                <div class="page-header-content">
-                    <h1><i class="fas fa-dollar-sign"></i> Finance Calculators</h1>
-                    <p class="page-subtitle">Calculate investments, loans, and financial returns accurately</p>
-                </div>
-
+        <!-- Finance Calculator Container -->
+        <div class="finance-container">
+            <!-- Category Selector -->
+            <div class="category-selector">
+                <button class="category-btn active" data-category="interest">Interest</button>
+                <button class="category-btn" data-category="loans">Loans</button>
+                <button class="category-btn" data-category="investments">Investments</button>
+                <button class="category-btn" data-category="savings">Savings</button>
+                <button class="category-btn" data-category="retirement">Retirement</button>
+                <button class="category-btn" data-category="business">Business</button>
+                <button class="category-btn" data-category="mortgage">Mortgage</button>
+                <button class="category-btn" data-category="currency">Currency</button>
             </div>
 
-            <section class="collapsible-section collapsed">
-                <div class="collapsible-header">
-                    <h2><i class="fas fa-info-circle"></i> About Finance Calculators</h2>
-                    <button class="collapse-toggle" aria-label="Toggle section">
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                </div>
-                <div class="collapsible-content">
-                    <div class="description-content">
-                        <p>Make informed <strong>financial decisions</strong> with our collection of <strong>finance
-                                calculators</strong> covering <strong>interest calculations</strong>, <strong>loan
-                                payments</strong>, <strong>mortgage planning</strong>, <strong>investment
-                                returns</strong>,
-                            and <strong>savings goals</strong>. Whether you're planning investments, calculating loan
-                            payments, or budgeting, our financial tools provide accurate, easy-to-understand results.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="collapsible-section collapsed">
-                <div class="collapsible-header">
-                    <h2><i class="fas fa-list"></i> Available Finance Calculators (10)</h2>
-                    <button class="collapse-toggle" aria-label="Toggle section">
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                </div>
-                <div class="collapsible-content">
-                    <div class="calculator-list-content">
-                        <ul class="calculator-feature-list">
-                            <li><strong>Simple Interest Calculator</strong> - Calculate I = PRT for simple interest</li>
-                            <li><strong>Compound Interest Calculator</strong> - Find compound interest and future value
-                            </li>
-                            <li><strong>Loan Calculator</strong> - Calculate monthly payments and total interest</li>
-                            <li><strong>Mortgage Calculator</strong> - Plan home loans with amortization schedules</li>
-                            <li><strong>Investment Return Calculator</strong> - Calculate ROI and investment growth</li>
-                            <li><strong>ROI Calculator</strong> - Find return on investment percentage</li>
-                            <li><strong>Savings Calculator</strong> - Plan savings goals and growth</li>
-                            <li><strong>Discount Calculator</strong> - Calculate sale prices and savings</li>
-                            <li><strong>Tip Calculator</strong> - Calculate restaurant tips and bill splitting</li>
-                            <li><strong>Percentage Calculator</strong> - Find percentages, increases, decreases</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- Calculator Content with Ads -->
-            <div class="container">
-                <div class="content-grid-with-ads">
-
-                    <!-- Left AdSense Sidebar -->
-                    <aside class="ad-sidebar ad-sidebar-left">
-                        <div class="ad-sticky">
-                            <div class="ad-unit">
-                                <p class="ad-label">Advertisement</p>
-                                <div class="ad-placeholder ad-300x600">
-                                    <!-- Google AdSense Code Here -->
-                                    <p>300x600</p>
-                                </div>
-                            </div>
-                            <div class="ad-unit">
-                                <p class="ad-label">Advertisement</p>
-                                <div class="ad-placeholder ad-300x250">
-                                    <!-- Google AdSense Code Here -->
-                                    <p>300x250</p>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
-
-                    <!-- 7. FINANCE SECTION -->
-                    <section id="finance" class="calculator-section">
-                        <h2 class="section-title"><i class="fas fa-dollar-sign"></i> Finance Calculators</h2>
-
-                        <div class="finance-container">
-                            <div class="finance-type-select">
-                                <label for="finance-type">Finance Calculator:</label>
-                                <select id="finance-type" onchange="FinanceApp.changeType()">
-                                    <option value="simple-interest">Simple Interest</option>
-                                    <option value="compound-interest">Compound Interest</option>
-                                    <option value="loan">Loan Calculator</option>
-                                    <option value="mortgage">Mortgage Calculator</option>
-                                    <option value="investment">Investment Return</option>
-                                    <option value="roi">ROI (Return on Investment)</option>
-                                    <option value="savings">Savings Calculator</option>
-                                    <option value="discount">Discount Calculator</option>
-                                    <option value="tip">Tip Calculator</option>
-                                    <option value="percentage">Percentage Calculator</option>
-                                </select>
-                            </div>
-
-                            <div id="finance-inputs" class="finance-inputs"></div>
-
-                            <button class="calc-button" onclick="FinanceApp.calculate()">Calculate</button>
-
-                            <div id="finance-result" class="finance-result"></div>
-                        </div>
-                    </section>
-
-                    <!-- Right AdSense Sidebar -->
-                    <aside class="ad-sidebar ad-sidebar-right">
-                        <div class="ad-sticky">
-                            <div class="ad-unit">
-                                <p class="ad-label">Advertisement</p>
-                                <div class="ad-placeholder ad-300x600">
-                                    <!-- Google AdSense Code Here -->
-                                    <p>300x600</p>
-                                </div>
-                            </div>
-                            <div class="ad-unit">
-                                <p class="ad-label">Advertisement</p>
-                                <div class="ad-placeholder ad-300x250">
-                                    <!-- Google AdSense Code Here -->
-                                    <p>300x250</p>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
-                </div>
+            <!-- Calculator Selection -->
+            <div class="calculator-selection">
+                <label class="selection-label">Select Calculator</label>
+                <select class="calculator-select" id="calculatorSelect">
+                    <!-- Options will be populated by JavaScript -->
+                </select>
             </div>
 
+            <!-- Calculator Interface -->
+            <div class="calculator-interface">
+                <div class="calculator-header">
+                    <h2 id="calculatorTitle">Select a Calculator</h2>
+                </div>
 
+                <!-- Formula Display -->
+                <div class="formula-display" id="formulaDisplay">
+                    <div class="formula-label">Formula:</div>
+                    <div class="formula-equation" id="formulaEquation">-</div>
+                </div>
+
+                <!-- Input Fields -->
+                <div class="input-fields" id="inputFields">
+                    <!-- Will be dynamically populated -->
+                </div>
+
+                <!-- Calculate Button -->
+                <button class="calculate-btn" id="calculateBtn">
+                    <span>Calculate</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                    </svg>
+                </button>
+
+                <!-- Result Display -->
+                <div class="result-display" id="resultDisplay">
+                    <div class="result-label">Result:</div>
+                    <div class="result-value" id="resultValue">-</div>
+                    <div class="result-unit" id="resultUnit"></div>
+                </div>
+
+                <!-- Explanation Section -->
+                <div class="explanation-section" id="explanationSection">
+                    <h3>How it works</h3>
+                    <p id="explanationText"></p>
+                </div>
+
+                <!-- Financial Terms Reference -->
+                <div class="terms-reference">
+                    <h3>Common Financial Terms</h3>
+                    <div class="terms-grid">
+                        <div class="term-item">
+                            <span class="term-name">APR</span>
+                            <span class="term-desc">Annual Percentage Rate</span>
+                        </div>
+                        <div class="term-item">
+                            <span class="term-name">ROI</span>
+                            <span class="term-desc">Return on Investment</span>
+                        </div>
+                        <div class="term-item">
+                            <span class="term-name">APY</span>
+                            <span class="term-desc">Annual Percentage Yield</span>
+                        </div>
+                        <div class="term-item">
+                            <span class="term-name">NPV</span>
+                            <span class="term-desc">Net Present Value</span>
+                        </div>
+                        <div class="term-item">
+                            <span class="term-name">IRR</span>
+                            <span class="term-desc">Internal Rate of Return</span>
+                        </div>
+                        <div class="term-item">
+                            <span class="term-name">CAGR</span>
+                            <span class="term-desc">Compound Annual Growth</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Tips -->
+                <div class="tips-reference">
+                    <h3>Financial Planning Tips</h3>
+                    <div class="tips-grid">
+                        <div class="tip-item">
+                            <span class="tip-icon">💡</span>
+                            <span class="tip-text">Pay yourself first - Save before spending</span>
+                        </div>
+                        <div class="tip-item">
+                            <span class="tip-icon">📊</span>
+                            <span class="tip-text">Diversify investments to reduce risk</span>
+                        </div>
+                        <div class="tip-item">
+                            <span class="tip-icon">⏰</span>
+                            <span class="tip-text">Start early - Compound interest works best over time</span>
+                        </div>
+                        <div class="tip-item">
+                            <span class="tip-icon">💳</span>
+                            <span class="tip-text">Pay off high-interest debt first</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google AdSense - Right Sidebar -->
+        <div class="ad-container ad-right">
+            <div class="ad-placeholder">
+                <span class="ad-label">AdSense</span>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                    data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            </div>
         </div>
     </main>
 
-    
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="container">
+        <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <a href="/">
-                        <h3>CalcRex</h3>
-                    </a>
-                    <p>Complete Calculator Suite - Free Forever</p>
-                    <p class="footer-description">Your all-in-one solution for calculations, conversions, and more.</p>
+                    <h3>CalcREX</h3>
+                    <p>Your complete online calculator suite for every calculation need.</p>
                 </div>
-    
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="/"><i class="fas fa-calculator"></i> Calculator</a></li>
-                        <li><a href="/computer-science/"><i class="fas fa-laptop-code"></i> Computer Science</a></li>
-                        <li><a href="/converters"><i class="fas fa-exchange-alt"></i> Converters</a></li>
-                        <li><a href="/physics"><i class="fas fa-atom"></i> Physics</a></li>
-                        <li><a href="/chemistry"><i class="fas fa-vial"></i> Chemistry</a></li>
-                        <li><a href="/electricity"><i class="fas fa-bolt"></i> Electricity</a></li>
-                        <li><a href="/finance"><i class="fas fa-dollar-sign"></i> Finance</a></li>
-                        <li><a href="/date-time"><i class="fas fa-clock"></i> Date & Time</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
-    
                 <div class="footer-section">
-                    <h4>Information</h4>
+                    <h3>Feature Categories</h3>
                     <ul class="footer-links">
-                        <li><a href="/about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                        <li><a href="/contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                        <li><a href="/policy-document"><i class="fas fa-shield-alt"></i> Policy Document</a></li>
-                        <li><a href="/policy-document#privacy-policy"><i class="fas fa-file-contract"></i> Privacy
-                                Policy</a></li>
-                        <li><a href="/policy-document#terms-of-service"><i class="fas fa-file-contract"></i> Terms of
-                                Service</a></li>
+                        <li><a href="/converters">Unit Converter</a></li>
+                        <li><a href="/physics">Physics</a></li>
+                        <li><a href="/chemistry">Chemistry</a></li>
+                        <li><a href="/electricity">Electronics</a></li>
+                        <li><a href="/computer-science">Computer Science</a></li>
+                        <li><a href="/finance">Finance</a></li>
+                        <li><a href="/date-time">Date & Time</a></li>
                     </ul>
-                </div>
-    
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-    
-    
                 </div>
             </div>
-    
-            <!-- Donation Button 
-                <div class="header-actions">
-                  
-                    <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" target="_blank" rel="noopener noreferrer"
-                        class="donate-btn">
-                        <i class="fas fa-heart"></i>
-                        <span class="donate-text">
-                            <span class="donate-main">Support Us</span>
-                            <span class="donate-sub">Buy us a coffee</span>
-                        </span>
-                       
-                        <i class="fab fa-paypal"></i>
-                    </a>
-                -->
-        </div>
-    
-        <div class="footer-bottom">
-            <p>&copy; 2025 CalcRex. All rights reserved.</p>
-        </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CalcREX. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
+    <script src="/js/script.js"></script>
+    <script src="/js/finance.js"></script>
 
-    <script src="../js/theme.js"></script>
-    <script src="../js/collapsible.js"></script>
-    <script src="../js/finance.js"></script>
+    <!-- Google AdSense Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -35,7 +35,7 @@
     <meta property="og:description"
         content="Contact CalcRex for technical support, feature requests, feedback, or business inquiries. We're here to help.">
     <meta property="og:image" content="https://calcrex.com/img/calcrex-banner.webp">
-    <meta property="og:image" content="https://calcrex.com/images/og-contact.jpg">
+    <meta property="og:image" content="https://calcrex.com/img/og-contact.jpg">
     <meta property="og:site_name" content="CalcRex">
     <meta property="og:locale" content="en_US">
 
@@ -45,20 +45,15 @@
     <meta name="twitter:title" content="Contact CalcRex - Get Support & Feedback">
     <meta name="twitter:description"
         content="Contact CalcRex for technical support, feature requests, feedback, or business inquiries.">
-    <meta name="twitter:image" content="https://calcrex.com/images/twitter-contact.jpg">
+    <meta name="twitter:image" content="https://calcrex.com/img/twitter-contact.jpg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png">
-    <!-- <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/unified.css">
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/pages.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Structured Data - Breadcrumbs -->
@@ -95,7 +90,7 @@
         "@type": "Organization",
         "name": "CalcRex",
         "url": "https://calcrex.com",
-        "logo": "https://calcrex.com/images/logo.png",
+        "logo": "https://calcrex.com/img/logo.png",
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "Customer Support",
@@ -113,12 +108,12 @@
       "@type": "Organization",
       "name": "CalcRex",
       "url": "https://calcrex.com",
-      "logo": "https://calcrex.com/images/logo.png",
+      "logo": "https://calcrex.com/img/logo.png",
       "description": "Free online calculators for physics, chemistry, finance, unit conversion and more.",
       "contactPoint": [
         {
           "@type": "ContactPoint",
-          "telephone": "+1-XXX-XXX-XXXX",
+          "telephone": "+1-631-664-5320",
           "contactType": "Customer Service",
           "email": "support@calcrex.com",
           "areaServed": "Worldwide",
@@ -127,7 +122,7 @@
         {
           "@type": "ContactPoint",
           "contactType": "Business Inquiries",
-          "email": "business@calcrex.com",
+          "email": "support@calcrex.com",
           "areaServed": "Worldwide",
           "availableLanguage": ["English"]
         }
@@ -141,269 +136,214 @@
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- Header Section -->
     <header class="site-header">
-        <div class="container">
-            <a href="/">
-                <div class="logo">
-                    <i class="fas fa-calculator"></i>
-                    <h1>CalcRex</h1>
-                </div>
-            </a>
-
-            <div class="header-actions">
-
-                <!-- Donation Button 
-                <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="donate-btn">
-                    <i class="fas fa-heart"></i> 
-                    <span class="donate-text">
-                        <span class="donate-main">Support Us</span>
-                        <span class="donate-sub">Buy us a coffee</span>
-                    </span>
-                   
-                    <i class="fab fa-paypal"></i>
-                </a> -->
-
-                <!-- Theme Toggle -->
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/">
+                    <span class="logo-text">Calc<span class="logo-highlight">REX</span></span>
+                </a>
             </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Calculator</a></li>
+                    <li><a href="/converters" class="nav-link">Unit Converter</a></li>
+                    <li><a href="/physics" class="nav-link">Physics</a></li>
+                    <li><a href="/chemistry" class="nav-link">Chemistry</a></li>
+                    <li><a href="/electronics" class="nav-link">Electronics</a></li>
+                    <li><a href="/computer-science" class="nav-link">Computer Science</a></li>
+                    <li><a href="/finance" class="nav-link">Finance</a></li>
+                    <li><a href="/date-time" class="nav-link">Date & Time</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Sticky Navigation -->
-
-    <nav class="calc-nav">
-        <div class="container">
-            <ul class="nav-menu">
-                <li><a href="/"><i class="fas fa-calculator" aria-hidden="true"></i> Calculator</a></li>
-                <li><a href="/converters"><i class="fas fa-exchange-alt" aria-hidden="true"></i> Converters</a></li>
-                <li><a href="/physics"><i class="fas fa-atom" aria-hidden="true"></i> Physics</a></li>
-                <li><a href="/chemistry"><i class="fas fa-vial" aria-hidden="true"></i> Chemistry</a></li>
-                <li><a href="/electricity"><i class="fas fa-bolt" aria-hidden="true"></i> Electricity</a></li>
-                <li><a href="/computer-science"><i class="fas fa-laptop-code" aria-hidden="true"></i> Computer
-                        Science</a></li>
-                <li><a href="/finance"><i class="fas fa-dollar-sign" aria-hidden="true"></i> Finance</a></li>
-                <li><a href="/date-time"><i class="fas fa-clock" aria-hidden="true"></i> Date & Time</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Breadcrumb Navigation (Add to body after header) -->
-    <div class="container">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="https://calcrex.com/">
-                        <span itemprop="name">Home</span>
-                    </a>
-                    <meta itemprop="position" content="1" />
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">Contact</span>
-                    <meta itemprop="position" content="2" />
-                </li>
-            </ol>
-        </nav>
-    </div>
-
     <!-- Main Content -->
     <main class="page-content">
-        <div class="container">
+        <div class="page-container">
+            <!-- Page Header -->
             <div class="page-header">
-                <h1><i class="fas fa-envelope"></i> Contact Us</h1>
-                <p class="page-subtitle">We'd love to hear from you</p>
+                <h1 class="page-title">Contact Us</h1>
+                <p class="page-subtitle">We'd Love to Hear From You</p>
             </div>
 
-            <div class="contact-grid">
-                <div class="contact-form-section">
-                    <div class="content-card">
-                        <h2>Send Us a Message</h2>
-                        <form class="contact-form" id="contactForm">
-                            <div class="form-group">
-                                <label for="name"><i class="fas fa-user"></i> Name *</label>
-                                <input type="text" id="name" name="name" required placeholder="Your full name">
-                            </div>
+            <!-- Contact Intro -->
+            <div class="content-section">
+                <p>Have a question, suggestion, or feedback? Whether you've found a bug, want to request a new
+                    calculator, or just want to say hello, we're here to help!</p>
+            </div>
 
-                            <div class="form-group">
-                                <label for="email"><i class="fas fa-envelope"></i> Email *</label>
-                                <input type="email" id="email" name="email" required
-                                    placeholder="your.email@example.com">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="subject"><i class="fas fa-tag"></i> Subject *</label>
-                                <select id="subject" name="subject" required>
-                                    <option value="">Select a subject</option>
-                                    <option value="general">General Inquiry</option>
-                                    <option value="support">Technical Support</option>
-                                    <option value="feedback">Feedback & Suggestions</option>
-                                    <option value="bug">Report a Bug</option>
-                                    <option value="feature">Feature Request</option>
-                                    <option value="business">Business Inquiry</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message"><i class="fas fa-comment"></i> Message *</label>
-                                <textarea id="message" name="message" rows="6" required
-                                    placeholder="Type your message here..."></textarea>
-                            </div>
-
-                            <button type="submit" class="btn-primary btn-large btn-block">
-                                <i class="fas fa-paper-plane"></i> Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="contact-info-section">
-                    <div class="content-card">
-                        <h2>Get in Touch</h2>
-                        <div class="contact-methods">
-                            <div class="contact-method">
-                                <i class="fas fa-envelope"></i>
-                                <div>
-                                    <h3>Email</h3>
-                                    <p>support@calcrex.com</p>
-                                    <small>We typically respond within 24 hours</small>
-                                </div>
-                            </div>
-
-                            <div class="contact-method">
-                                <i class="fas fa-clock"></i>
-                                <div>
-                                    <h3>Response Time</h3>
-                                    <p>24-48 hours</p>
-                                    <small>Monday - Friday, 9 AM - 5 PM EST</small>
-                                </div>
-                            </div>
-
-                            <div class="contact-method">
-                                <i class="fas fa-comments"></i>
-                                <div>
-                                    <h3>Social Media</h3>
-                                    <p>Follow us for updates</p>
-                                    <div class="contact-social">
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-facebook"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+                <h2>Send Us a Message</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
                         </div>
                     </div>
 
-                    <div class="content-card">
-                        <h2>Frequently Asked Questions</h2>
-                        <div class="faq-list">
-                            <div class="faq-item">
-                                <strong>Is CalcRex really free?</strong>
-                                <p>Yes! All our calculators and tools are 100% free to use, forever.</p>
-                            </div>
-                            <div class="faq-item">
-                                <strong>Do I need to create an account?</strong>
-                                <p>No account needed. Use all features immediately without registration.</p>
-                            </div>
-                            <div class="faq-item">
-                                <strong>Can I suggest new calculators?</strong>
-                                <p>Absolutely! We love hearing your ideas. Use the form to send suggestions.</p>
-                            </div>
-                        </div>
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category">
+                            <option value="">Select a category</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="bug">Bug Report</option>
+                            <option value="feature">Feature Request</option>
+                            <option value="calculator">New Calculator Suggestion</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="support">Technical Support</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="8" required
+                            placeholder="Tell us what's on your mind..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="form-message" id="formMessage"></div>
+            </div>
+
+            <!-- Contact Info Cards -->
+            <div class="content-section">
+                <h2>Other Ways to Reach Us</h2>
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>For general inquiries</p>
+                        <a href="mailto:info@calcrex.com" class="contact-link">info@calcrex.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">🐛</div>
+                        <h3>Bug Reports</h3>
+                        <p>Found an issue?</p>
+                        <a href="mailto:bugs@calcrex.com" class="contact-link">bugs@calcrex.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">💡</div>
+                        <h3>Suggestions</h3>
+                        <p>Have an idea?</p>
+                        <a href="mailto:suggestions@calcrex.com" class="contact-link">suggestions@calcrex.com</a>
                     </div>
                 </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="content-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>Is CalcREX really free?</h3>
+                        <p>Yes! All 300+ calculators are completely free to use with no subscriptions or hidden fees.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I use CalcREX on my mobile device?</h3>
+                        <p>Absolutely! CalcREX is fully responsive and works perfectly on smartphones, tablets, and
+                            desktops.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do I need to create an account?</h3>
+                        <p>No account needed! You can use all calculators instantly without any registration.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How accurate are the calculations?</h3>
+                        <p>All our calculators use standard formulas and are tested for accuracy. However, for critical
+                            decisions, always verify with a professional.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I suggest a new calculator?</h3>
+                        <p>Yes! We love hearing your ideas. Use the contact form above or email us at
+                            suggestions@calcrex.com</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What if I find a bug or error?</h3>
+                        <p>Please report it! Use the bug report category in the form above or email bugs@calcrex.com
+                            with details.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Response Time Notice -->
+            <div class="notice-box">
+                <h3>📬 Response Time</h3>
+                <p>We typically respond to all inquiries within 24-48 hours during business days. For urgent technical
+                    issues, please mark your message as "Technical Support" and we'll prioritize it.</p>
             </div>
         </div>
     </main>
 
-    
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="container">
+        <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <a href="/">
-                        <h3>CalcRex</h3>
-                    </a>
-                    <p>Complete Calculator Suite - Free Forever</p>
-                    <p class="footer-description">Your all-in-one solution for calculations, conversions, and more.</p>
+                    <h3>CalcREX</h3>
+                    <p>Your complete online calculator suite for every calculation need.</p>
                 </div>
-    
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="/"><i class="fas fa-calculator"></i> Calculator</a></li>
-                        <li><a href="/computer-science/"><i class="fas fa-laptop-code"></i> Computer Science</a></li>
-                        <li><a href="/converters"><i class="fas fa-exchange-alt"></i> Converters</a></li>
-                        <li><a href="/physics"><i class="fas fa-atom"></i> Physics</a></li>
-                        <li><a href="/chemistry"><i class="fas fa-vial"></i> Chemistry</a></li>
-                        <li><a href="/electricity"><i class="fas fa-bolt"></i> Electricity</a></li>
-                        <li><a href="/finance"><i class="fas fa-dollar-sign"></i> Finance</a></li>
-                        <li><a href="/date-time"><i class="fas fa-clock"></i> Date & Time</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
-    
                 <div class="footer-section">
-                    <h4>Information</h4>
+                    <h3>Feature Categories</h3>
                     <ul class="footer-links">
-                        <li><a href="/about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                        <li><a href="/contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                        <li><a href="/policy-document"><i class="fas fa-shield-alt"></i> Policy Document</a></li>
-                        <li><a href="/policy-document#privacy-policy"><i class="fas fa-file-contract"></i> Privacy
-                                Policy</a></li>
-                        <li><a href="/policy-document#terms-of-service"><i class="fas fa-file-contract"></i> Terms of
-                                Service</a></li>
+                        <li><a href="/converters">Unit Converter</a></li>
+                        <li><a href="/physics">Physics</a></li>
+                        <li><a href="/chemistry">Chemistry</a></li>
+                        <li><a href="/electricity">Electronics</a></li>
+                        <li><a href="/computer-science">Computer Science</a></li>
+                        <li><a href="/finance">Finance</a></li>
+                        <li><a href="/date-time">Date & Time</a></li>
                     </ul>
-                </div>
-    
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-    
-    
                 </div>
             </div>
-    
-            <!-- Donation Button 
-                <div class="header-actions">
-                  
-                    <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" target="_blank" rel="noopener noreferrer"
-                        class="donate-btn">
-                        <i class="fas fa-heart"></i>
-                        <span class="donate-text">
-                            <span class="donate-main">Support Us</span>
-                            <span class="donate-sub">Buy us a coffee</span>
-                        </span>
-                       
-                        <i class="fab fa-paypal"></i>
-                    </a>
-                -->
-        </div>
-    
-        <div class="footer-bottom">
-            <p>&copy; 2025 CalcRex. All rights reserved.</p>
-        </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CalcREX. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-
-    <script src="js/theme.js"></script>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-        });
-    </script>
+    <script src="/js/script.js"></script>
+    <script src="/js/contact.js"></script>
 </body>
 
 </html>

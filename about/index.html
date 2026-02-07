@@ -51,12 +51,10 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/unified.css">
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/pages.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Structured Data - Breadcrumbs -->
@@ -88,7 +86,7 @@
       "@type": "Organization",
       "name": "CalcRex",
       "url": "https://calcrex.com",
-      "logo": "https://calcrex.com/images/logo.png",
+      "logo": "https://calcrex.com/img/logo.png",
       "description": "Free online calculators for physics, chemistry, finance, unit conversion and more.",
       "sameAs": [
         "https://twitter.com/calcrex",
@@ -114,239 +112,238 @@
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- Header Section -->
     <header class="site-header">
-        <div class="container">
-            <a href="/">
-                <div class="logo">
-                    <i class="fas fa-calculator"></i>
-                    <h1>CalcRex</h1>
-                </div>
-            </a>
-
-            <div class="header-actions">
-
-                <!-- Donation Button 
-                <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="donate-btn">
-                    <i class="fas fa-heart"></i> 
-                    <span class="donate-text">
-                        <span class="donate-main">Support Us</span>
-                        <span class="donate-sub">Buy us a coffee</span>
-                    </span>
-                   
-                    <i class="fab fa-paypal"></i>
-                </a> -->
-
-                <!-- Theme Toggle -->
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/">
+                    <span class="logo-text">Calc<span class="logo-highlight">REX</span></span>
+                </a>
             </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Calculator</a></li>
+                    <li><a href="/converters" class="nav-link">Unit Converter</a></li>
+                    <li><a href="/physics" class="nav-link">Physics</a></li>
+                    <li><a href="/chemistry" class="nav-link">Chemistry</a></li>
+                    <li><a href="/electronics" class="nav-link">Electronics</a></li>
+                    <li><a href="/computer-science" class="nav-link">Computer Science</a></li>
+                    <li><a href="/finance" class="nav-link">Finance</a></li>
+                    <li><a href="/date-time" class="nav-link">Date & Time</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Sticky Navigation -->
-
-    <nav class="calc-nav">
-        <div class="container">
-            <ul class="nav-menu">
-                <li><a href="/"><i class="fas fa-calculator" aria-hidden="true"></i> Calculator</a></li>
-                <li><a href="/converters"><i class="fas fa-exchange-alt" aria-hidden="true"></i> Converters</a></li>
-                <li><a href="/physics"><i class="fas fa-atom" aria-hidden="true"></i> Physics</a></li>
-                <li><a href="/chemistry"><i class="fas fa-vial" aria-hidden="true"></i> Chemistry</a></li>
-                <li><a href="/electricity"><i class="fas fa-bolt" aria-hidden="true"></i> Electricity</a></li>
-                <li><a href="/computer-science"><i class="fas fa-laptop-code" aria-hidden="true"></i> Computer
-                        Science</a></li>
-                <li><a href="/finance"><i class="fas fa-dollar-sign" aria-hidden="true"></i> Finance</a></li>
-                <li><a href="/date-time"><i class="fas fa-clock" aria-hidden="true"></i> Date & Time</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Breadcrumb Navigation (Add to body after header) -->
-    <div class="container">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="https://calcrex.com/">
-                        <span itemprop="name">Home</span>
-                    </a>
-                    <meta itemprop="position" content="1" />
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">About</span>
-                    <meta itemprop="position" content="2" />
-                </li>
-            </ol>
-        </nav>
-    </div>
-
     <!-- Main Content -->
     <main class="page-content">
-        <div class="container">
+        <div class="page-container">
+            <!-- Page Header -->
             <div class="page-header">
-                <h1><i class="fas fa-info-circle"></i> About CalcRex</h1>
-                <p class="page-subtitle">Your Complete Calculator Suite - Free Forever</p>
+                <h1 class="page-title">About CalcREX</h1>
+                <p class="page-subtitle">Your Complete Online Calculator Suite</p>
             </div>
 
-            <div class="content-card">
-                <h2>Our Mission</h2>
-                <p>CalcRex was created with a simple mission: to provide everyone with free, accessible, and
-                    powerful calculation tools. Whether you're a student, professional, or anyone who needs quick
-                    calculations, we're here to help.</p>
+            <!-- About Content -->
+            <div class="content-section">
+                <h2>Welcome to CalcREX</h2>
+                <p>CalcREX is your comprehensive online calculator platform, designed to make complex calculations
+                    simple, accessible, and instant. Whether you're a student, professional, educator, or curious mind,
+                    CalcREX provides the tools you need to solve problems across multiple disciplines.</p>
             </div>
 
-            <div class="content-card">
+            <div class="content-section">
                 <h2>What We Offer</h2>
-                <div class="feature-grid">
-                    <div class="feature-item">
-                        <i class="fas fa-calculator"></i>
-                        <h3>Multiple Calculators</h3>
-                        <p>From basic to scientific and advanced calculators for all your needs.</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🧮</div>
+                        <h3>300+ Calculators</h3>
+                        <p>From basic arithmetic to advanced scientific calculations across 8 specialized categories.
+                        </p>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-exchange-alt"></i>
-                        <h3>Unit Converters</h3>
-                        <p>Convert between different units for length, weight, temperature, and more.</p>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Beautiful Design</h3>
+                        <p>Each section features unique, carefully crafted themes with smooth animations and intuitive
+                            interfaces.</p>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-atom"></i>
-                        <h3>Physics Formulas</h3>
-                        <p>Calculate physics problems with our comprehensive formula library.</p>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Fully Responsive</h3>
+                        <p>Perfect experience on any device - desktop, tablet, or mobile. Calculate anywhere, anytime.
+                        </p>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-vial"></i>
-                        <h3>Chemistry Tools</h3>
-                        <p>Solve chemistry calculations including molarity, pH, and more.</p>
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>Educational</h3>
+                        <p>Every calculator includes formulas, explanations, and practical examples to help you learn.
+                        </p>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-bolt"></i>
-                        <h3>Electricity Calculators</h3>
-                        <p>Electrical formulas for voltage, current, resistance, and power.</p>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Lightning Fast</h3>
+                        <p>Instant calculations with no lag. Get your answers in milliseconds.</p>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-dollar-sign"></i>
-                        <h3>Finance Tools</h3>
-                        <p>Calculate loans, investments, interest, and more.</p>
+                    <div class="feature-card">
+                        <div class="feature-icon">🆓</div>
+                        <h3>Completely Free</h3>
+                        <p>No subscriptions, no hidden fees. All calculators are 100% free to use.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="content-card">
-                <h2>Why Choose CalcRex?</h2>
-                <ul class="benefits-list">
-                    <li><i class="fas fa-check-circle"></i> <strong>100% Free:</strong> All calculators and tools
-                        are completely free to use.</li>
-                    <li><i class="fas fa-check-circle"></i> <strong>No Registration:</strong> Use all features
-                        without creating an account.</li>
-                    <li><i class="fas fa-check-circle"></i> <strong>Fast & Accurate:</strong> Get instant, precise
-                        results for all calculations.</li>
-                    <li><i class="fas fa-check-circle"></i> <strong>Mobile Friendly:</strong> Works perfectly on all
-                        devices and screen sizes.</li>
-                    <li><i class="fas fa-check-circle"></i> <strong>Privacy Focused:</strong> We don't track or
-                        store your calculations.</li>
-                    <li><i class="fas fa-check-circle"></i> <strong>Always Updated:</strong> Regular updates with
-                        new features and improvements.</li>
+            <div class="content-section">
+                <h2>Our Categories</h2>
+                <div class="categories-list">
+                    <div class="category-item">
+                        <span class="category-icon">🧮</span>
+                        <div class="category-info">
+                            <h3>Calculator</h3>
+                            <p>Basic, Scientific, and Advanced modes with memory functions and extensive operations.</p>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-icon">🔄</span>
+                        <div class="category-info">
+                            <h3>Unit Converter</h3>
+                            <p>12 categories covering length, weight, temperature, volume, and more with 100+ units.</p>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-icon">⚛️</span>
+                        <div class="category-info">
+                            <h3>Physics</h3>
+                            <p>25+ calculators for kinematics, dynamics, energy, electricity, and more.</p>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-icon">🧪</span>
+                        <div class="category-info">
+                            <h3>Chemistry</h3>
+                            <p>30+ tools for molarity, pH, stoichiometry, thermochemistry, and chemical analysis.</p>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-icon">⚡</span>
+                        <div class="category-info">
+                            <h3>Electronics</h3>
+                            <p>30+ calculators for Ohm's law, circuits, power, capacitors, and electrical engineering.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-icon">💻</span>
+                        <div class="category-info">
+                            <h3>Computer Science</h3>
+                            <p>40+ tools for binary conversion, algorithms, networking, and computational analysis.</p>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-icon">💰</span>
+                        <div class="category-info">
+                            <h3>Finance</h3>
+                            <p>35+ calculators for loans, investments, retirement, mortgages, and financial planning.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-icon">⏰</span>
+                        <div class="category-info">
+                            <h3>Date & Time</h3>
+                            <p>20+ temporal tools including age calculator, date difference, business days, and
+                                countdowns.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Our Mission</h2>
+                <p>At CalcREX, we believe that powerful calculation tools should be accessible to everyone. Our mission
+                    is to provide accurate, easy-to-use calculators that help people solve problems, learn concepts, and
+                    make informed decisions in their academic, professional, and personal lives.</p>
+                <p>We're committed to:</p>
+                <ul class="mission-list">
+                    <li>✓ Maintaining 100% accuracy in all calculations</li>
+                    <li>✓ Providing clear explanations and educational value</li>
+                    <li>✓ Keeping the platform completely free and accessible</li>
+                    <li>✓ Continuously improving and adding new calculators</li>
+                    <li>✓ Ensuring privacy and security for all users</li>
                 </ul>
             </div>
 
-            <div class="content-card">
-                <h2>Our Commitment</h2>
-                <p>We are committed to keeping CalcRex free and accessible to everyone. Our goal is to continuously
-                    improve and add new calculators based on user feedback. We believe that quality calculation
-                    tools should be available to all without barriers.</p>
+            <div class="content-section">
+                <h2>Why CalcREX?</h2>
+                <p><strong>"REX"</strong> stands for <strong>Reliable, Extensive, eXcellent</strong> - the three pillars
+                    that guide everything we do:</p>
+                <ul class="pillars-list">
+                    <li><strong>Reliable:</strong> Accurate calculations you can trust, every time.</li>
+                    <li><strong>Extensive:</strong> Comprehensive coverage across multiple disciplines.</li>
+                    <li><strong>eXcellent:</strong> Superior user experience with beautiful design and smooth
+                        performance.</li>
+                </ul>
             </div>
 
+            <div class="content-section">
+                <h2>Get in Touch</h2>
+                <p>Have questions, suggestions, or feedback? We'd love to hear from you! Visit our <a href="/contact"
+                        class="text-link">Contact page</a> to get in touch with our team.</p>
+            </div>
+
+            <!-- CTA Section -->
             <div class="cta-section">
-                <h2>Start Calculating Now</h2>
-                <p>Ready to use our free calculator suite?</p>
-                <a href="index.html" class="btn-primary btn-large"><i class="fas fa-calculator"></i> Go to
-                    Calculators</a>
+                <h2>Ready to Calculate?</h2>
+                <p>Explore our comprehensive calculator suite and solve your problems instantly.</p>
+                <a href="/" class="cta-button">Start Calculating Now</a>
             </div>
         </div>
     </main>
-
-   
-    
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="container">
+        <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <a href="/">
-                        <h3>CalcRex</h3>
-                    </a>
-                    <p>Complete Calculator Suite - Free Forever</p>
-                    <p class="footer-description">Your all-in-one solution for calculations, conversions, and more.</p>
+                    <h3>CalcREX</h3>
+                    <p>Your complete online calculator suite for every calculation need.</p>
                 </div>
-    
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="/"><i class="fas fa-calculator"></i> Calculator</a></li>
-                        <li><a href="/computer-science/"><i class="fas fa-laptop-code"></i> Computer Science</a></li>
-                        <li><a href="/converters"><i class="fas fa-exchange-alt"></i> Converters</a></li>
-                        <li><a href="/physics"><i class="fas fa-atom"></i> Physics</a></li>
-                        <li><a href="/chemistry"><i class="fas fa-vial"></i> Chemistry</a></li>
-                        <li><a href="/electricity"><i class="fas fa-bolt"></i> Electricity</a></li>
-                        <li><a href="/finance"><i class="fas fa-dollar-sign"></i> Finance</a></li>
-                        <li><a href="/date-time"><i class="fas fa-clock"></i> Date & Time</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
-    
                 <div class="footer-section">
-                    <h4>Information</h4>
+                    <h3>Feature Categories</h3>
                     <ul class="footer-links">
-                        <li><a href="/about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                        <li><a href="/contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                        <li><a href="/policy-document"><i class="fas fa-shield-alt"></i> Policy Document</a></li>
-                        <li><a href="/policy-document#privacy-policy"><i class="fas fa-file-contract"></i> Privacy
-                                Policy</a></li>
-                        <li><a href="/policy-document#terms-of-service"><i class="fas fa-file-contract"></i> Terms of
-                                Service</a></li>
+                        <li><a href="/converters">Unit Converter</a></li>
+                        <li><a href="/physics">Physics</a></li>
+                        <li><a href="/chemistry">Chemistry</a></li>
+                        <li><a href="/electricity">Electronics</a></li>
+                        <li><a href="/computer-science">Computer Science</a></li>
+                        <li><a href="/finance">Finance</a></li>
+                        <li><a href="/date-time">Date & Time</a></li>
                     </ul>
-                </div>
-    
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-    
-    
                 </div>
             </div>
-    
-            <!-- Donation Button 
-                <div class="header-actions">
-                  
-                    <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" target="_blank" rel="noopener noreferrer"
-                        class="donate-btn">
-                        <i class="fas fa-heart"></i>
-                        <span class="donate-text">
-                            <span class="donate-main">Support Us</span>
-                            <span class="donate-sub">Buy us a coffee</span>
-                        </span>
-                       
-                        <i class="fab fa-paypal"></i>
-                    </a>
-                -->
-        </div>
-    
-        <div class="footer-bottom">
-            <p>&copy; 2025 CalcRex. All rights reserved.</p>
-        </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CalcREX. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-
-    <script src="js/theme.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>

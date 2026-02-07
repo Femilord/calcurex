@@ -1,0 +1,614 @@
+/* ========================================
+   COMPUTER SCIENCE CALCULATOR STYLES
+   Extends styles.css with tech-themed design
+======================================== */
+
+/* ========================================
+   CS CONTAINER
+======================================== */
+.cs-container {
+    width: 100%;
+    max-width: 580px;
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    overflow: visible;
+    transition: max-width var(--transition-normal);
+}
+
+/* ========================================
+   CATEGORY SELECTOR - Tech Green/Matrix Theme
+======================================== */
+.category-selector {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-xs);
+    padding: var(--gap-md);
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    border-bottom: 2px solid #6ee7b7;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.category-btn {
+    padding: 0.65rem 0.5rem;
+    border: none;
+    background: white;
+    color: #065f46;
+    font-weight: 600;
+    font-size: 0.7rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-sm);
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-btn::before {
+    content: '01';
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    transform: translateY(-50%);
+    font-family: 'Courier New', monospace;
+    font-size: 2rem;
+    opacity: 0.1;
+    color: #10b981;
+    transition: left 0.5s;
+}
+
+.category-btn:hover::before {
+    left: 100%;
+}
+
+.category-btn:hover {
+    background: #ecfdf5;
+    transform: translateY(-1px);
+    border: 2px solid #34d399;
+}
+
+.category-btn.active {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+}
+
+/* ========================================
+   CALCULATOR SELECTION - Slate Theme
+======================================== */
+.calculator-selection {
+    padding: var(--gap-md);
+    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+    border-bottom: 2px solid #94a3b8;
+}
+
+.selection-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: var(--gap-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.calculator-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #94a3b8;
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1e293b;
+    background: white;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-family: 'Courier New', monospace;
+}
+
+.calculator-select:focus {
+    outline: none;
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.calculator-select:hover {
+    border-color: #64748b;
+}
+
+/* ========================================
+   CALCULATOR INTERFACE
+======================================== */
+.calculator-interface {
+    padding: var(--gap-md);
+}
+
+.calculator-header {
+    margin-bottom: var(--gap-md);
+    padding-bottom: var(--gap-sm);
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.calculator-header h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+/* ========================================
+   FORMULA DISPLAY - Code Block Style
+======================================== */
+.formula-display {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    padding: var(--gap-md);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--gap-md);
+    border: 2px solid #10b981;
+    position: relative;
+    overflow: hidden;
+}
+
+.formula-display::after {
+    content: '</>';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 4rem;
+    opacity: 0.1;
+    color: #10b981;
+    transform: rotate(-15deg);
+}
+
+.formula-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #6ee7b7;
+    margin-bottom: var(--gap-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.formula-equation {
+    font-size: 1.125rem;
+    color: #a7f3d0;
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    word-wrap: break-word;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+   INPUT FIELDS
+======================================== */
+.input-fields {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-md);
+    margin-bottom: var(--gap-md);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+}
+
+.input-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: var(--gap-xs);
+}
+
+.input-symbol {
+    font-family: 'Courier New', monospace;
+    color: #10b981;
+    font-weight: 700;
+}
+
+.input-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--gap-xs);
+}
+
+.cs-input {
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: var(--radius-md);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #1e293b;
+    background: white;
+    transition: all var(--transition-fast);
+    font-family: 'Courier New', monospace;
+}
+
+.cs-input:focus {
+    outline: none;
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.input-unit {
+    padding: 0.75rem;
+    background: #ecfdf5;
+    border: 2px solid #6ee7b7;
+    border-radius: var(--radius-md);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #065f46;
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', monospace;
+}
+
+/* ========================================
+   CALCULATE BUTTON - Matrix Style
+======================================== */
+.calculate-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-sm);
+    margin-bottom: var(--gap-md);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Courier New', monospace;
+}
+
+.calculate-btn::before {
+    content: '01010101';
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    opacity: 0.3;
+    transition: left 1s;
+}
+
+.calculate-btn:hover::before {
+    left: 100%;
+}
+
+.calculate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
+    background: linear-gradient(135deg, #059669, #047857);
+}
+
+.calculate-btn:active {
+    transform: translateY(0);
+}
+
+.calculate-btn svg {
+    transition: transform var(--transition-fast);
+    position: relative;
+    z-index: 1;
+}
+
+.calculate-btn:hover svg {
+    transform: scale(1.2) rotate(90deg);
+}
+
+.calculate-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+   RESULT DISPLAY - Terminal Style
+======================================== */
+.result-display {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    padding: var(--gap-lg);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--gap-md);
+    border: 2px solid #10b981;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+    position: relative;
+}
+
+.result-display::before {
+    content: '>';
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: #6ee7b7;
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.result-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #6ee7b7;
+    margin-bottom: var(--gap-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.result-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #a7f3d0;
+    font-family: 'Courier New', monospace;
+    margin-bottom: var(--gap-xs);
+    word-wrap: break-word;
+    text-shadow: 0 0 10px rgba(167, 243, 208, 0.5);
+}
+
+.result-unit {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6ee7b7;
+    font-family: 'Courier New', monospace;
+}
+
+/* ========================================
+   EXPLANATION SECTION
+======================================== */
+.explanation-section {
+    background: #f8fafc;
+    padding: var(--gap-md);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--gap-md);
+    border: 2px solid #e2e8f0;
+}
+
+.explanation-section h3 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin: 0 0 var(--gap-sm) 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.explanation-section p {
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    color: #475569;
+    margin: 0;
+}
+
+/* ========================================
+   QUICK REFERENCE
+======================================== */
+.quick-reference {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    padding: var(--gap-md);
+    border-radius: var(--radius-lg);
+    border: 2px solid #34d399;
+    margin-bottom: var(--gap-md);
+}
+
+.quick-reference h3 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #065f46;
+    margin: 0 0 var(--gap-sm) 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.reference-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-xs);
+}
+
+.reference-item {
+    background: white;
+    padding: var(--gap-sm);
+    border-radius: var(--radius-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    border: 2px solid #6ee7b7;
+    transition: all var(--transition-fast);
+}
+
+.reference-item:hover {
+    border-color: #10b981;
+    transform: translateX(4px);
+}
+
+.ref-system {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.ref-digits {
+    color: #059669;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+}
+
+/* ========================================
+   CONSTANTS REFERENCE
+======================================== */
+.constants-reference {
+    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+    padding: var(--gap-md);
+    border-radius: var(--radius-lg);
+    border: 2px solid #94a3b8;
+}
+
+.constants-reference h3 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 var(--gap-sm) 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.constants-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-xs);
+}
+
+.constant-item {
+    background: white;
+    padding: var(--gap-sm);
+    border-radius: var(--radius-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    border: 1px solid #cbd5e1;
+}
+
+.constant-name {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.constant-value {
+    color: #475569;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+======================================== */
+
+/* Small tablets and larger phones (576px+) */
+@media (min-width: 576px) {
+    .cs-container {
+        max-width: 600px;
+    }
+
+    .category-selector {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .category-btn {
+        font-size: 0.75rem;
+        padding: 0.75rem 0.5rem;
+    }
+
+    .calculator-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .input-fields {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reference-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .constants-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets (768px+) */
+@media (min-width: 768px) {
+    .cs-container {
+        max-width: 640px;
+    }
+
+    .category-selector {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .category-btn {
+        font-size: 0.8125rem;
+    }
+
+    .formula-equation {
+        font-size: 1.25rem;
+    }
+
+    .result-value {
+        font-size: 2.5rem;
+    }
+}
+
+/* Desktops (1024px+) */
+@media (min-width: 1024px) {
+    .cs-container {
+        max-width: 680px;
+    }
+
+    .calculator-header h2 {
+        font-size: 1.375rem;
+    }
+}
+
+/* Large desktops (1280px+) */
+@media (min-width: 1280px) {
+    .cs-container {
+        max-width: 720px;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+======================================== */
+@media print {
+
+    .category-selector,
+    .calculate-btn,
+    .quick-reference,
+    .constants-reference {
+        display: none;
+    }
+
+    .cs-container {
+        box-shadow: none;
+    }
+
+    .result-display,
+    .formula-display {
+        background: white;
+        border-color: black;
+    }
+
+    .result-value,
+    .formula-equation {
+        color: black;
+    }
+}

@@ -53,17 +53,11 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png">
-    <!-- <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/unified.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/seo-intro.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/pages.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -92,7 +86,7 @@
       "@type": "Organization",
       "name": "CalcRex",
       "url": "https://calcrex.com/",
-      "logo": "https://calcrex.com/logo.png",
+      "logo": "https://calcrex.com/img/logo.png",
       "description": "Professional online calculator platform offering 90+ free calculators",
       "sameAs": [
         "https://twitter.com/CalcRex",
@@ -140,48 +134,42 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Calculators",
-          "item": "https://calcrex.com/#calculator"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Computer Science",
-          "item": "https://calcrex.com/computer-science/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
           "name": "Converter",
           "item": "https://calcrex.com/converters/"
         },
         {
           "@type": "ListItem",
-          "position": 5,
+          "position": 3,
           "name": "Physics",
           "item": "https://calcrex.com/physics/"
         },
         {
           "@type": "ListItem",
-          "position": 6,
+          "position": 4,
           "name": "Chemistry",
           "item": "https://calcrex.com/chemistry/"
         },
         {
           "@type": "ListItem",
-          "position": 7,
+          "position": 5,
           "name": "Electricity",
           "item": "https://calcrex.com/electricity/"
         },
         {
           "@type": "ListItem",
-          "position": 8,
+          "position": 6,
+          "name": "Computer Science",
+          "item": "https://calcrex.com/computer-science/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
           "name": "Finance",
           "item": "https://calcrex.com/finance/"
         },
         {
           "@type": "ListItem",
-          "position": 9,
+          "position": 8,
           "name": "Date & Time",
           "item": "https://calcrex.com/date-time/"
         }
@@ -232,7 +220,7 @@
     </script>
 
     <!-- Performance Hints -->
-    <link rel="prefetch" href="/js/calculator.js">
+    <link rel="prefetch" href="/js/script.js">
     <link rel="prefetch" href="/js/converters.js">
 
     <!-- Security -->
@@ -241,268 +229,252 @@
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- Header Section -->
     <header class="site-header">
-        <div class="container">
-            <a href="/">
-                <div class="logo">
-                    <i class="fas fa-calculator"></i>
-                    <h1>CalcRex</h1>
-                </div>
-            </a>
-
-            <div class="header-actions">
-
-                <!-- Donation Button 
-            <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="donate-btn">
-                <i class="fas fa-heart"></i> 
-                <span class="donate-text">
-                    <span class="donate-main">Support Us</span>
-                    <span class="donate-sub">Buy us a coffee</span>
-                </span>
-               
-                <i class="fab fa-paypal"></i>
-            </a> -->
-
-                <!-- Theme Toggle -->
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#calculator">
+                    <span class="logo-text">Calc<span class="logo-highlight">REX</span></span>
+                </a>
             </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link active">Calculator</a></li>
+                    <li><a href="/converters" class="nav-link">Unit Converter</a></li>
+                    <li><a href="/physics" class="nav-link">Physics</a></li>
+                    <li><a href="/chemistry" class="nav-link">Chemistry</a></li>
+                    <li><a href="/electricity" class="nav-link">Electronics</a></li>
+                    <li><a href="/computer-science" class="nav-link">Computer Science</a></li>
+                    <li><a href="/finance" class="nav-link">Finance</a></li>
+                    <li><a href="/date-time" class="nav-link">Date & Time</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Sticky Navigation -->
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="intro-container">
+            <h1 class="intro-title">Free Online Calculator Suite - 90+ Calculators & Converters</h1>
 
-    <nav class="calc-nav">
-        <div class="container">
-            <ul class="nav-menu">
-                <li><a href="/"><i class="fas fa-calculator" aria-hidden="true"></i> Calculator</a></li>
-                <li><a href="/converters"><i class="fas fa-exchange-alt" aria-hidden="true"></i> Converters</a></li>
-                <li><a href="/physics"><i class="fas fa-atom" aria-hidden="true"></i> Physics</a></li>
-                <li><a href="/chemistry"><i class="fas fa-vial" aria-hidden="true"></i> Chemistry</a></li>
-                <li><a href="/electricity"><i class="fas fa-bolt" aria-hidden="true"></i> Electricity</a></li>
-                <li><a href="/computer-science"><i class="fas fa-laptop-code" aria-hidden="true"></i> Computer
-                        Science</a></li>
-                <li><a href="/finance"><i class="fas fa-dollar-sign" aria-hidden="true"></i> Finance</a></li>
-                <li><a href="/date-time"><i class="fas fa-clock" aria-hidden="true"></i> Date & Time</a></li>
-            </ul>
+            <div class="intro-content" id="introContent">
+                <p class="intro-text">
+                    Welcome to CalcRex, your complete free online calculator suite featuring over 90 professional-grade
+                    calculators, unit converter, and specialized tools for mathematics, science, finance, and everyday
+                    calculations. Whether you're a student tackling complex physics problems, a professional managing
+                    financial calculations, or anyone needing quick and accurate conversions, CalcRex provides instant,
+                    reliable results without requiring registration or downloads.
+                </p>
+                <p class="intro-text intro-text-extra">
+                    Our comprehensive calculator platform combines scientific calculators, unit converters, physics
+                    formulas, chemistry calculators, electrical engineering tools, computer science utilities, finance
+                    calculators, and date & time tools all in one convenient location. Each calculator is designed for
+                    accuracy, speed, and ease of use, working seamlessly on desktop, tablet, and mobile devices.
+                </p>
+            </div>
+
+            <button class="read-more-btn" id="readMoreBtn">
+                <span class="btn-text">Read More</span>
+                <span class="btn-icon">▼</span>
+            </button>
         </div>
-    </nav>
+    </section>
 
-
-
-    <!-- Main Content -->
+    <!-- Main Content Wrapper -->
     <main class="main-content">
-
-        <!-- SEO Introduction Section -->
-        <section class="seo-intro-section">
-            <div class="container">
-                <h1 class="intro-title">Free Online Calculator Suite - 90+ Calculators & Converters</h1>
-
-                <div class="intro-description">
-                    <p class="intro-lead">
-                        Welcome to <strong>CalcRex</strong>, your complete free online calculator suite featuring over
-                        90
-                        professional-grade calculators, unit converter, and specialized tools for mathematics, science,
-                        finance, and everyday calculations. Whether you're a student tackling complex physics problems,
-                        a
-                        professional managing financial calculations, or anyone needing quick and accurate conversions,
-                        CalcRex provides instant, reliable results without requiring registration or downloads.
-                    </p>
-
-                    <p class="intro-features">
-                        Our comprehensive calculator platform combines <strong>scientific calculators</strong>,
-                        <strong>unit
-                            converters</strong>, <strong>physics formulas</strong>, <strong>chemistry
-                            calculators</strong>,
-                        <strong>electrical engineering tools</strong>, <strong>computer science utilities</strong>,
-                        <strong>finance calculators</strong>, and <strong>date & time tools</strong> all in one
-                        convenient
-                        location. Each calculator is designed for accuracy, speed, and ease of use, working seamlessly
-                        on
-                        desktop, tablet, and mobile devices.
-                    </p>
-                </div>
+        <!-- Google AdSense - Left Sidebar -->
+        <div class="ad-container ad-left">
+            <div class="ad-placeholder">
+                <span class="ad-label">AdSense</span>
+                <!-- Google AdSense Code Here -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                    data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
             </div>
-        </section>
+        </div>
 
+        <div class="calculator-container">
+            <!-- Mode Selector -->
+            <div class="mode-selector">
+                <button class="mode-btn active" data-mode="basic">Basic</button>
+                <button class="mode-btn" data-mode="scientific">Scientific</button>
+                <button class="mode-btn" data-mode="advanced">Advanced</button>
+            </div>
 
-
-
-        <!-- Calculator Content with Ads -->
-        <div class="container">
-            <div class="content-grid-with-ads">
-
-                <!-- Left AdSense Sidebar -->
-                <aside class="ad-sidebar ad-sidebar-left">
-                    <div class="ad-sticky">
-                        <div class="ad-unit">
-                            <p class="ad-label">Advertisement</p>
-                            <div class="ad-placeholder ad-300x600">
-                                <!-- Google AdSense Code Here -->
-                                <p>300x600</p>
-                            </div>
-                        </div>
-                        <div class="ad-unit">
-                            <p class="ad-label">Advertisement</p>
-                            <div class="ad-placeholder ad-300x250">
-                                <!-- Google AdSense Code Here -->
-                                <p>300x250</p>
-                            </div>
+            <!-- Calculator Display -->
+            <div class="calculator">
+                <!-- Quick Access Section (Memory + Conversion) - Now at the very top -->
+                <div class="quick-access-section">
+                    <!-- Memory Operations -->
+                    <div class="memory-section">
+                        <h3>Memory</h3>
+                        <div class="memory-buttons">
+                            <button class="btn memory" data-memory="mc">MC</button>
+                            <button class="btn memory" data-memory="mr">MR</button>
+                            <button class="btn memory" data-memory="m+">M+</button>
+                            <button class="btn memory" data-memory="m-">M−</button>
+                            <button class="btn memory" data-memory="ms">MS</button>
                         </div>
                     </div>
-                </aside>
 
-
-
-                <!-- 1. CALCULATOR SECTION -->
-                <!-- Main Calculator Content -->
-                <div class="main-calculator-content">
-
-                    <!-- 1. CALCULATOR SECTION -->
-                    <section id="calculator" class="calculator-section">
-                        <h2 class="section-title"><i class="fas fa-calculator"></i> Calculator</h2>
-
-                        <!-- Mode Toggle -->
-                        <div class="mode-selector">
-                            <button class="mode-btn active" onclick="switchCalcMode('basic')">Basic</button>
-                            <button class="mode-btn" onclick="switchCalcMode('scientific')">Scientific</button>
-                            <button class="mode-btn" onclick="switchCalcMode('advanced')">Advanced</button>
-                        </div>
-
-                        <div class="keyboard-hint">
-                            <i class="fas fa-keyboard"></i> Keyboard shortcuts: Numbers, +, -, *, /, Enter, Backspace,
-                            Esc
-                        </div>
-
-                        <div class="calculator-container" id="calc-container">
-                            <!-- Angle Mode (Hidden for Basic) -->
-                            <div class="angle-mode" id="calc-angle-mode" style="display: none;">
-                                <label><input type="radio" name="calc-angle" value="deg" checked> Degrees</label>
-                                <label><input type="radio" name="calc-angle" value="rad"> Radians</label>
-                            </div>
-
-                            <div class="calc-display">
-                                <div class="calc-history" id="calc-history"></div>
-                                <input type="text" id="calc-display" class="display-field" value="0" readonly>
-                            </div>
-
-                            <div class="calc-buttons" id="calc-buttons"></div>
-                        </div>
-                    </section>
-
-                </div>
-                <!-- End Main Calculator Content -->
-
-                <!-- Right AdSense Sidebar -->
-                <aside class="ad-sidebar ad-sidebar-right">
-                    <div class="ad-sticky">
-                        <div class="ad-unit">
-                            <p class="ad-label">Advertisement</p>
-                            <div class="ad-placeholder ad-300x600">
-                                <!-- Google AdSense Code Here -->
-                                <p>300x600</p>
-                            </div>
-                        </div>
-                        <div class="ad-unit">
-                            <p class="ad-label">Advertisement</p>
-                            <div class="ad-placeholder ad-300x250">
-                                <!-- Google AdSense Code Here -->
-                                <p>300x250</p>
-                            </div>
+                    <!-- Angle Mode Conversion -->
+                    <div class="conversion-section">
+                        <h3>Angle Mode</h3>
+                        <div class="conversion-buttons">
+                            <button class="btn conversion" data-convert="deg">DEG</button>
+                            <button class="btn conversion" data-convert="rad">RAD</button>
                         </div>
                     </div>
-                </aside>
+                </div>
 
+                <!-- Memory Display -->
+                <div class="memory-display" id="memoryDisplay"></div>
+
+                <div class="display-section">
+                    <div class="expression" id="expression"></div>
+                    <div class="display" id="display">0</div>
+                </div>
+
+                <!-- Basic Calculator Buttons -->
+                <div class="buttons-container" id="basicButtons">
+                    <button class="btn clear" data-action="clear">C</button>
+                    <button class="btn clear" data-action="delete">⌫</button>
+                    <button class="btn operator" data-value="(">(</button>
+                    <button class="btn operator" data-value=")">)</button>
+
+                    <button class="btn number" data-value="7">7</button>
+                    <button class="btn number" data-value="8">8</button>
+                    <button class="btn number" data-value="9">9</button>
+                    <button class="btn operator" data-value="/">÷</button>
+
+                    <button class="btn number" data-value="4">4</button>
+                    <button class="btn number" data-value="5">5</button>
+                    <button class="btn number" data-value="6">6</button>
+                    <button class="btn operator" data-value="*">×</button>
+
+                    <button class="btn number" data-value="1">1</button>
+                    <button class="btn number" data-value="2">2</button>
+                    <button class="btn number" data-value="3">3</button>
+                    <button class="btn operator" data-value="-">−</button>
+
+                    <button class="btn number" data-value="0">0</button>
+                    <button class="btn number" data-value=".">.</button>
+                    <button class="btn operator" data-value="%">%</button>
+                    <button class="btn operator" data-value="+">+</button>
+
+                    <button class="btn number" data-value="+/-">+/−</button>
+                    <button class="btn equals" data-action="equals" style="grid-column: span 3;">=</button>
+                </div>
+
+                <!-- Scientific Calculator Additional Buttons -->
+                <div class="buttons-container scientific-buttons" id="scientificButtons">
+                    <button class="btn function" data-function="sin">sin</button>
+                    <button class="btn function" data-function="cos">cos</button>
+                    <button class="btn function" data-function="tan">tan</button>
+                    <button class="btn function" data-function="log">log</button>
+
+                    <button class="btn function" data-function="asin">sin⁻¹</button>
+                    <button class="btn function" data-function="acos">cos⁻¹</button>
+                    <button class="btn function" data-function="atan">tan⁻¹</button>
+                    <button class="btn function" data-function="ln">ln</button>
+
+                    <button class="btn function" data-function="sqrt">√</button>
+                    <button class="btn function" data-function="cbrt">∛</button>
+                    <button class="btn function" data-function="pow">x^y</button>
+                    <button class="btn function" data-function="exp">e^x</button>
+
+                    <button class="btn function" data-value="pi">π</button>
+                    <button class="btn function" data-value="e">e</button>
+                    <button class="btn function" data-function="factorial">n!</button>
+                    <button class="btn function" data-function="abs">|x|</button>
+                </div>
+
+                <!-- Advanced Calculator Additional Buttons -->
+                <div class="buttons-container advanced-buttons" id="advancedButtons">
+                    <button class="btn function" data-function="sinh">sinh</button>
+                    <button class="btn function" data-function="cosh">cosh</button>
+                    <button class="btn function" data-function="tanh">tanh</button>
+                    <button class="btn function" data-function="mod">mod</button>
+
+                    <button class="btn function" data-function="ceil">⌈x⌉</button>
+                    <button class="btn function" data-function="floor">⌊x⌋</button>
+                    <button class="btn function" data-function="round">round</button>
+                    <button class="btn function" data-function="random">Rand</button>
+
+                    <button class="btn function" data-function="gcd">GCD</button>
+                    <button class="btn function" data-function="lcm">LCM</button>
+                    <button class="btn function" data-function="negate">±</button>
+                    <button class="btn clear" id="clearHistory" style="font-size: 0.75rem;">Clear History</button>
+                </div>
             </div>
-            <!-- End content-grid-with-ads -->
+
+            <!-- History Panel (Advanced Mode) - Now inside calculator -->
+            <div class="history-panel" id="historyPanel">
+                <h3>Calculation History</h3>
+                <div class="history-list" id="historyList"></div>
+            </div>
+        </div>
+
+        <!-- Google AdSense - Right Sidebar -->
+        <div class="ad-container ad-right">
+            <div class="ad-placeholder">
+                <span class="ad-label">AdSense</span>
+                <!-- Google AdSense Code Here -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                    data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            </div>
         </div>
     </main>
 
-
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="container">
+        <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <a href="/">
-                        <h3>CalcRex</h3>
-                    </a>
-                    <p>Complete Calculator Suite - Free Forever</p>
-                    <p class="footer-description">Your all-in-one solution for calculations, conversions, and more.</p>
+                    <h3>CalcREX</h3>
+                    <p>Your complete online calculator suite for every calculation need.</p>
                 </div>
-
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="/"><i class="fas fa-calculator"></i> Calculator</a></li>
-                        <li><a href="/computer-science/"><i class="fas fa-laptop-code"></i> Computer Science</a></li>
-                        <li><a href="/converters"><i class="fas fa-exchange-alt"></i> Converters</a></li>
-                        <li><a href="/physics"><i class="fas fa-atom"></i> Physics</a></li>
-                        <li><a href="/chemistry"><i class="fas fa-vial"></i> Chemistry</a></li>
-                        <li><a href="/electricity"><i class="fas fa-bolt"></i> Electricity</a></li>
-                        <li><a href="/finance"><i class="fas fa-dollar-sign"></i> Finance</a></li>
-                        <li><a href="/date-time"><i class="fas fa-clock"></i> Date & Time</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-section">
-                    <h4>Information</h4>
+                    <h3>Feature Categories</h3>
                     <ul class="footer-links">
-                        <li><a href="/about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                        <li><a href="/contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                        <li><a href="/policy-document"><i class="fas fa-shield-alt"></i> Policy Document</a></li>
-                        <li><a href="/policy-document#privacy-policy"><i class="fas fa-file-contract"></i> Privacy
-                                Policy</a></li>
-                        <li><a href="/policy-document#terms-of-service"><i class="fas fa-file-contract"></i> Terms of
-                                Service</a></li>
+                        <li><a href="/converters">Unit Converter</a></li>
+                        <li><a href="/physics">Physics</a></li>
+                        <li><a href="/chemistry">Chemistry</a></li>
+                        <li><a href="/electricity">Electronics</a></li>
+                        <li><a href="/computer-science">Computer Science</a></li>
+                        <li><a href="/finance">Finance</a></li>
+                        <li><a href="/date-time">Date & Time</a></li>
                     </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-
-
                 </div>
             </div>
-
-            <!-- Donation Button 
-            <div class="header-actions">
-              
-                <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" target="_blank" rel="noopener noreferrer"
-                    class="donate-btn">
-                    <i class="fas fa-heart"></i>
-                    <span class="donate-text">
-                        <span class="donate-main">Support Us</span>
-                        <span class="donate-sub">Buy us a coffee</span>
-                    </span>
-                   
-                    <i class="fab fa-paypal"></i>
-                </a>
-            -->
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2025 CalcRex. All rights reserved.</p>
-        </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CalcREX. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
+    <script src="/js/script.js"></script>
 
-    <script src="js/theme.js"></script>
-    <script src="js/calculator.js"></script>
-    <script src="js/collapsible.js"></script>
-
+    <!-- Google AdSense Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -44,21 +44,17 @@
     <meta name="twitter:title" content="Physics Calculators - CalcRex | 20+ Free Physics Tools">
     <meta name="twitter:description"
         content="Solve physics problems with free calculators for kinematics, dynamics, energy, and more.">
-    <meta name="twitter:image" content="https://calcrex.com/images/twitter-physics.jpg">
+    <meta name="twitter:image" content="https://calcrex.com/img/twitter-physics.jpg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png">
-    <!-- <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
+
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/unified.css">
-    <link rel="stylesheet" href="/css/collapsible.css">
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/physics.css">
+    <link rel="stylesheet" href="/css/pages.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Structured Data - Breadcrumbs -->
@@ -96,7 +92,7 @@
         "name": "CalcRex",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://calcrex.com/images/logo.png"
+          "url": "https://calcrex.com/img/logo.png"
         }
       }
     }
@@ -143,318 +139,209 @@
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- Header Section -->
     <header class="site-header">
-        <div class="container">
-            <a href="/">
-                <div class="logo">
-                    <i class="fas fa-calculator"></i>
-                    <h1>CalcRex</h1>
-                </div>
-            </a>
-
-            <div class="header-actions">
-
-                <!-- Donation Button 
-                <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="donate-btn">
-                    <i class="fas fa-heart"></i> 
-                    <span class="donate-text">
-                        <span class="donate-main">Support Us</span>
-                        <span class="donate-sub">Buy us a coffee</span>
-                    </span>
-                   
-                    <i class="fab fa-paypal"></i>
-                </a> -->
-
-                <!-- Theme Toggle -->
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/">
+                    <span class="logo-text">Calc<span class="logo-highlight">REX</span></span>
+                </a>
             </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Calculator</a></li>
+                    <li><a href="/converters" class="nav-link">Unit Converter</a></li>
+                    <li><a href="/physics" class="nav-link active">Physics</a></li>
+                    <li><a href="/chemistry" class="nav-link">Chemistry</a></li>
+                    <li><a href="/electricity" class="nav-link">Electronics</a></li>
+                    <li><a href="/computer-science" class="nav-link">Computer Science</a></li>
+                    <li><a href="/finance" class="nav-link">Finance</a></li>
+                    <li><a href="/date-time" class="nav-link">Date & Time</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Sticky Navigation -->
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="intro-container">
+            <h1 class="intro-title">Comprehensive Physics Calculators - Solve Any Physics Problem</h1>
 
-    <nav class="calc-nav">
-        <div class="container">
-            <ul class="nav-menu">
-                <li><a href="/"><i class="fas fa-calculator" aria-hidden="true"></i> Calculator</a></li>
-                <li><a href="/converters"><i class="fas fa-exchange-alt" aria-hidden="true"></i> Converters</a></li>
-                <li><a href="/physics"><i class="fas fa-atom" aria-hidden="true"></i> Physics</a></li>
-                <li><a href="/chemistry"><i class="fas fa-vial" aria-hidden="true"></i> Chemistry</a></li>
-                <li><a href="/electricity"><i class="fas fa-bolt" aria-hidden="true"></i> Electricity</a></li>
-                <li><a href="/computer-science"><i class="fas fa-laptop-code" aria-hidden="true"></i> Computer
-                        Science</a></li>
-                <li><a href="/finance"><i class="fas fa-dollar-sign" aria-hidden="true"></i> Finance</a></li>
-                <li><a href="/date-time"><i class="fas fa-clock" aria-hidden="true"></i> Date & Time</a></li>
-            </ul>
+            <div class="intro-content" id="introContent">
+                <p class="intro-text">
+                    Master physics calculations with CalcREX's comprehensive suite of physics calculators. From
+                    classical mechanics and kinematics to thermodynamics, electricity, magnetism, and modern physics,
+                    our tools provide instant, accurate solutions for students, educators, and professionals. Each
+                    calculator includes formulas, step-by-step explanations, and real-world applications.
+                </p>
+            </div>
+
+            <button class="read-more-btn" id="readMoreBtn">
+                <span class="btn-text">Read More</span>
+                <span class="btn-icon">▼</span>
+            </button>
         </div>
-    </nav>
+    </section>
 
-
+    <!-- Main Content Wrapper -->
     <main class="main-content">
-        <div class="container">
-            <div class="page-header">
-                <!-- Breadcrumb Navigation (Add to body after header) -->
-                <nav class="breadcrumb" aria-label="Breadcrumb">
-                    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                            <a itemprop="item" href="https://calcrex.com/">
-                                <span itemprop="name">Home</span>
-                            </a>
-                            <meta itemprop="position" content="1" />
-                        </li>
-                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                            <span itemprop="name">Physics Calculators</span>
-                            <meta itemprop="position" content="2" />
-                        </li>
-                    </ol>
-                </nav>
-
-                <div class="page-header-content">
-                    <h1><i class="fas fa-atom"></i> Physics Calculators</h1>
-                    <p class="page-subtitle">Solve complex physics problems with step-by-step solutions</p>
-                </div>
+        <!-- Google AdSense - Left Sidebar -->
+        <div class="ad-container ad-left">
+            <div class="ad-placeholder">
+                <span class="ad-label">AdSense</span>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                    data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
             </div>
-            <!-- Description Section - Collapsible -->
-            <section class="collapsible-section collapsed">
-                <div class="collapsible-header">
-                    <h2><i class="fas fa-info-circle"></i> About Physics Calculators</h2>
-                    <button class="collapse-toggle" aria-label="Toggle section">
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                </div>
-                <div class="collapsible-content">
-                    <div class="description-content">
-                        <p>
-                            Solve complex <strong>physics problems</strong> with our specialized calculators covering
-                            <strong>kinematics</strong>, <strong>dynamics</strong>, <strong>energy</strong>,
-                            <strong>thermodynamics</strong>, <strong>circular motion</strong>, and
-                            <strong>waves</strong>.
-                            Each calculator includes step-by-step solutions and explanations of the physics formulas
-                            used.
-                            Ideal for high school physics students, college students, and professionals working with
-                            physical calculations.
-                        </p>
-                    </div>
-                </div>
-            </section>
+        </div>
 
-            <!-- Available Calculators List - Collapsible -->
-            <section class="collapsible-section collapsed">
-                <div class="collapsible-header">
-                    <h2><i class="fas fa-list"></i> Available Physics Calculators (16)</h2>
-                    <button class="collapse-toggle" aria-label="Toggle section">
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                </div>
-                <div class="collapsible-content">
-                    <div class="calculator-list-content">
-                        <ul class="calculator-feature-list">
-                            <li><strong>Velocity Calculator</strong> - Calculate velocity using v = u + at formula</li>
-                            <li><strong>Displacement Calculator</strong> - Find displacement with s = ut + ½at² equation
-                            </li>
-                            <li><strong>Velocity Squared Calculator</strong> - Compute using v² = u² + 2as</li>
-                            <li><strong>Force Calculator</strong> - Newton's second law F = ma calculations</li>
-                            <li><strong>Momentum Calculator</strong> - Calculate momentum using p = mv</li>
-                            <li><strong>Impulse Calculator</strong> - Find impulse with J = FΔt</li>
-                            <li><strong>Work Calculator</strong> - Calculate work done using W = Fd</li>
-                            <li><strong>Power Calculator</strong> - Compute power with P = W/t</li>
-                            <li><strong>Kinetic Energy Calculator</strong> - Calculate KE = ½mv²</li>
-                            <li><strong>Potential Energy Calculator</strong> - Find PE = mgh</li>
-                            <li><strong>Heat Energy Calculator</strong> - Calculate Q = mcΔT for thermodynamics</li>
-                            <li><strong>Gravitational Force Calculator</strong> - Universal gravitation F = GMm/r²</li>
-                            <li><strong>Centripetal Force Calculator</strong> - Circular motion F = mv²/r</li>
-                            <li><strong>Angular Velocity Calculator</strong> - Calculate ω = v/r</li>
-                            <li><strong>Wave Speed Calculator</strong> - Find wave speed v = fλ</li>
-                            <li><strong>Lens Formula Calculator</strong> - Optical calculations 1/f = 1/v + 1/u</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Calculator Content with Ads -->
-            <div class="container">
-                <div class="content-grid-with-ads">
-
-                    <!-- Left AdSense Sidebar -->
-                    <aside class="ad-sidebar ad-sidebar-left">
-                        <div class="ad-sticky">
-                            <div class="ad-unit">
-                                <p class="ad-label">Advertisement</p>
-                                <div class="ad-placeholder ad-300x600">
-                                    <!-- Google AdSense Code Here -->
-                                    <p>300x600</p>
-                                </div>
-                            </div>
-                            <div class="ad-unit">
-                                <p class="ad-label">Advertisement</p>
-                                <div class="ad-placeholder ad-300x250">
-                                    <!-- Google AdSense Code Here -->
-                                    <p>300x250</p>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
-
-                    <!-- 3. PHYSICS SECTION -->
-                    <section id="physics" class="calculator-section">
-                        <h2 class="section-title"><i class="fas fa-atom"></i> Physics Calculators</h2>
-
-                        <div class="physics-container">
-                            <div class="physics-type-select">
-                                <label for="physics-type">Physics Formula:</label>
-                                <select id="physics-type" onchange="PhysicsApp.changeFormula()">
-                                    <optgroup label="Kinematics">
-                                        <option value="velocity">Velocity (v = u + at)</option>
-                                        <option value="displacement">Displacement (s = ut + ½at²)</option>
-                                        <option value="velocity-squared">Velocity Squared (v² = u² + 2as)</option>
-                                    </optgroup>
-                                    <optgroup label="Dynamics">
-                                        <option value="force">Force (F = ma)</option>
-                                        <option value="momentum">Momentum (p = mv)</option>
-                                        <option value="impulse">Impulse (J = FΔt)</option>
-                                    </optgroup>
-                                    <optgroup label="Energy & Work">
-                                        <option value="work">Work (W = Fd)</option>
-                                        <option value="power">Power (P = W/t)</option>
-                                        <option value="kinetic">Kinetic Energy (KE = ½mv²)</option>
-                                        <option value="potential">Potential Energy (PE = mgh)</option>
-                                    </optgroup>
-                                    <optgroup label="Thermodynamics">
-                                        <option value="heat-energy">Heat Energy (Q = mcΔT)</option>
-                                    </optgroup>
-                                    <optgroup label="Gravity">
-                                        <option value="gravitational-force">Gravitational Force (F = GMm/r²)</option>
-                                    </optgroup>
-                                    <optgroup label="Circular Motion">
-                                        <option value="centripetal-force">Centripetal Force (F = mv²/r)</option>
-                                        <option value="angular-velocity">Angular Velocity (ω = v/r)</option>
-                                    </optgroup>
-                                    <optgroup label="Waves & Optics">
-                                        <option value="wave-speed">Wave Speed (v = fλ)</option>
-                                        <option value="lens">Lens Formula (1/f = 1/v + 1/u)</option>
-                                    </optgroup>
-                                </select>
-                            </div>
-
-                            <div id="physics-inputs" class="physics-inputs"></div>
-
-                            <button class="calc-button" onclick="PhysicsApp.calculate()">Calculate</button>
-
-                            <div id="physics-result" class="physics-result"></div>
-                        </div>
-                    </section>
-
-                    <!-- Right AdSense Sidebar -->
-                    <aside class="ad-sidebar ad-sidebar-right">
-                        <div class="ad-sticky">
-                            <div class="ad-unit">
-                                <p class="ad-label">Advertisement</p>
-                                <div class="ad-placeholder ad-300x600">
-                                    <!-- Google AdSense Code Here -->
-                                    <p>300x600</p>
-                                </div>
-                            </div>
-                            <div class="ad-unit">
-                                <p class="ad-label">Advertisement</p>
-                                <div class="ad-placeholder ad-300x250">
-                                    <!-- Google AdSense Code Here -->
-                                    <p>300x250</p>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
-
-                </div>
+        <!-- Physics Calculator Container -->
+        <div class="physics-container">
+            <!-- Category Selector -->
+            <div class="category-selector">
+                <button class="category-btn active" data-category="kinematics">Kinematics</button>
+                <button class="category-btn" data-category="dynamics">Dynamics</button>
+                <button class="category-btn" data-category="energy">Energy</button>
+                <button class="category-btn" data-category="momentum">Momentum</button>
+                <button class="category-btn" data-category="gravity">Gravity</button>
+                <button class="category-btn" data-category="waves">Waves</button>
+                <button class="category-btn" data-category="thermodynamics">Thermodynamics</button>
+                <button class="category-btn" data-category="electricity">Electricity</button>
+                <button class="category-btn" data-category="magnetism">Magnetism</button>
+                <button class="category-btn" data-category="optics">Optics</button>
             </div>
 
+            <!-- Calculator Selection -->
+            <div class="calculator-selection">
+                <label class="selection-label">Select Calculator</label>
+                <select class="calculator-select" id="calculatorSelect">
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+            </div>
+
+            <!-- Calculator Interface -->
+            <div class="calculator-interface">
+                <div class="calculator-header">
+                    <h2 id="calculatorTitle">Select a Calculator</h2>
+                </div>
+
+                <!-- Formula Display -->
+                <div class="formula-display" id="formulaDisplay">
+                    <div class="formula-label">Formula:</div>
+                    <div class="formula-equation" id="formulaEquation">-</div>
+                </div>
+
+                <!-- Input Fields -->
+                <div class="input-fields" id="inputFields">
+                    <!-- Will be dynamically populated -->
+                </div>
+
+                <!-- Calculate Button -->
+                <button class="calculate-btn" id="calculateBtn">
+                    <span>Calculate</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <!-- Result Display -->
+                <div class="result-display" id="resultDisplay">
+                    <div class="result-label">Result:</div>
+                    <div class="result-value" id="resultValue">-</div>
+                    <div class="result-unit" id="resultUnit"></div>
+                </div>
+
+                <!-- Explanation Section -->
+                <div class="explanation-section" id="explanationSection">
+                    <h3>How it works</h3>
+                    <p id="explanationText"></p>
+                </div>
+
+                <!-- Constants Reference -->
+                <div class="constants-reference">
+                    <h3>Common Physics Constants</h3>
+                    <div class="constants-grid">
+                        <div class="constant-item">
+                            <span class="constant-name">g (Earth gravity)</span>
+                            <span class="constant-value">9.81 m/s²</span>
+                        </div>
+                        <div class="constant-item">
+                            <span class="constant-name">c (Speed of light)</span>
+                            <span class="constant-value">3×10⁸ m/s</span>
+                        </div>
+                        <div class="constant-item">
+                            <span class="constant-name">G (Gravitational constant)</span>
+                            <span class="constant-value">6.674×10⁻¹¹ N⋅m²/kg²</span>
+                        </div>
+                        <div class="constant-item">
+                            <span class="constant-name">k (Coulomb's constant)</span>
+                            <span class="constant-value">8.99×10⁹ N⋅m²/C²</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google AdSense - Right Sidebar -->
+        <div class="ad-container ad-right">
+            <div class="ad-placeholder">
+                <span class="ad-label">AdSense</span>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                    data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            </div>
         </div>
     </main>
 
-    
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="container">
+        <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <a href="/">
-                        <h3>CalcRex</h3>
-                    </a>
-                    <p>Complete Calculator Suite - Free Forever</p>
-                    <p class="footer-description">Your all-in-one solution for calculations, conversions, and more.</p>
+                    <h3>CalcREX</h3>
+                    <p>Your complete online calculator suite for every calculation need.</p>
                 </div>
-    
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="/"><i class="fas fa-calculator"></i> Calculator</a></li>
-                        <li><a href="/computer-science/"><i class="fas fa-laptop-code"></i> Computer Science</a></li>
-                        <li><a href="/converters"><i class="fas fa-exchange-alt"></i> Converters</a></li>
-                        <li><a href="/physics"><i class="fas fa-atom"></i> Physics</a></li>
-                        <li><a href="/chemistry"><i class="fas fa-vial"></i> Chemistry</a></li>
-                        <li><a href="/electricity"><i class="fas fa-bolt"></i> Electricity</a></li>
-                        <li><a href="/finance"><i class="fas fa-dollar-sign"></i> Finance</a></li>
-                        <li><a href="/date-time"><i class="fas fa-clock"></i> Date & Time</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
-    
                 <div class="footer-section">
-                    <h4>Information</h4>
+                    <h3>Feature Categories</h3>
                     <ul class="footer-links">
-                        <li><a href="/about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                        <li><a href="/contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                        <li><a href="/policy-document"><i class="fas fa-shield-alt"></i> Policy Document</a></li>
-                        <li><a href="/policy-document#privacy-policy"><i class="fas fa-file-contract"></i> Privacy
-                                Policy</a></li>
-                        <li><a href="/policy-document#terms-of-service"><i class="fas fa-file-contract"></i> Terms of
-                                Service</a></li>
+                        <li><a href="/converters">Unit Converter</a></li>
+                        <li><a href="/physics">Physics</a></li>
+                        <li><a href="/chemistry">Chemistry</a></li>
+                        <li><a href="/electricity">Electronics</a></li>
+                        <li><a href="/computer-science">Computer Science</a></li>
+                        <li><a href="/finance">Finance</a></li>
+                        <li><a href="/date-time">Date & Time</a></li>
                     </ul>
-                </div>
-    
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-    
-    
                 </div>
             </div>
-    
-            <!-- Donation Button 
-                <div class="header-actions">
-                  
-                    <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" target="_blank" rel="noopener noreferrer"
-                        class="donate-btn">
-                        <i class="fas fa-heart"></i>
-                        <span class="donate-text">
-                            <span class="donate-main">Support Us</span>
-                            <span class="donate-sub">Buy us a coffee</span>
-                        </span>
-                       
-                        <i class="fab fa-paypal"></i>
-                    </a>
-                -->
-        </div>
-    
-        <div class="footer-bottom">
-            <p>&copy; 2025 CalcRex. All rights reserved.</p>
-        </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CalcREX. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
+    <script src="/js/script.js"></script>
+    <script src="/js/physics.js"></script>
 
-    <script src="../js/theme.js"></script>
-    <script src="../js/collapsible.js"></script>
-    <script src="../js/physics.js"></script>
+    <!-- Google AdSense Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
